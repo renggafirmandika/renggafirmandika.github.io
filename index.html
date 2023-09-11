@@ -12,10 +12,6 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <style>
-        .c_main {
-            min-height: 500px !important;
-        }
-
         .narasi {
             color: white;
             text-align: center;
@@ -24,13 +20,24 @@
         .yellow-text {
             color: #ffc82d;
             font-style: italic;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: black !important;
+        }
+
+        h2 {
+            color: black !important;
+            font-family: "Google Sans", "Noto Sans", sans-serif !important;
+            font-weight: 500 !important;
         }
 
         .oleh {
             padding-top: 20px;
             font-size: 18px;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(99, 99, 99);
+            font-family: "Google Sans", "Noto Sans", sans-serif;
         }
 
         .oleh2 {
@@ -38,8 +45,47 @@
             color: rgb(61, 59, 59);
             font-size: 22px !important;
         }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(100px);
+            }
+        }
+
+        svg #wheel {
+            animation: scroll ease 1.5s infinite;
+        }
+
+        #bm {
+            background-color:#ffffff;
+            width:50%;
+            height:50%;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .tampilan_grid {
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vh;
+            margin: auto;
+        }
+
+        .isi_flex {
+            text-align: center;
+        }
+
+
     </style>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +94,7 @@
     </header>
     <main>
         <div class="c-page">
-            <section class="s_hero wf-section">
+            <section class="s_hero wf-section" data-aos="zoom-out" data-aos-duration="2000">
                 <div style="z-index: 1; position: relative;">
                     <div data-w-id="ae02ab84-a9be-7033-a974-25d84f8dd660"
                         style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: opacity;"
@@ -56,10 +102,9 @@
                         <div data-w-id="8f8e4dc1-3264-5252-5bc7-4abf04dd76d9"
                             style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
                             class="b_nav-bar">
-                            <p class="oleh oleh2">Seberapa jauh Indonesia telah berhasil dalam memberantas kemiskinan?</p>
-                            <div class="c_main cc-nav-flex">
-                                
-                            </div>
+                            <p class="oleh oleh2">Seberapa jauh Indonesia telah berhasil dalam memberantas kemiskinan?
+                            </p>
+
                         </div>
                         <div class="cc-gradient-overlay"></div>
                         <div class="c_main cc-hero">
@@ -84,21 +129,39 @@
                                     <div
                                         style="position: relative; display: inline-block; opacity: 1; transform: translate(0px, 0px);">
                                         We?</div>
-                                </div> <br>
+                                </div>
                                 <p class="oleh">oleh Musafrizki Putri, Narezi Febriansa, dan Rengga Firmandika</p>
-
+                                <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                                    <path id="wheel" d="M123.359,79.775l0,72.843"
+                                        style="fill:none;stroke:#000000;stroke-width:20px;" />
+                                    <path id="mouse"
+                                        d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+                                        style="fill:none;stroke:#000000;stroke-width:20px;" />
+                                </svg>
                             </h1>
+
                         </div>
+
                     </div>
 
                 </div>
             </section>
 
             <div style="z-index: 2; position: relative;">
-                <section class="s_intro wf-section">
-                    <div class="c_main">
-                        <h2 class="narasi">Pada tahun 2015, melalui SDGs, pemerintah telah berkomitmen untuk mencapai <span class="yellow-text">zero poverty</span> di
-                            tahun 2030</h2>
+                <section class="s_intro wf-section">    
+                    <div class="c_main2 tampilan_grid">
+                        <div class="isi_flex"> <div id="bm"></div>
+                        <h2 class="narasi" data-aos="fade-up" data-aos-duration="2000">Pada tahun 2015, melalui SDGs,
+                            pemerintah telah
+                            berkomitmen untuk mencapai
+                            <span class="yellow-text">no poverty</span> di
+                            tahun 2030
+                        </h2></div>
+                           
+                        
+                        
                     </div>
                 </section>
 
@@ -119,6 +182,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
+
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
 
 body {
     font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
-    color: #000;
+    color: white;
     font-size: 14px;
     line-height: 20px
 }
@@ -256,7 +256,7 @@ p {
     z-index: 0;
     height: 100%;
     background-image: -webkit-gradient(linear,left top,left bottom,color-stop(17%,transparent),color-stop(71%,rgba(24,19,29,0.71)),color-stop(90%,#211b29));
-    background-image: linear-gradient(180deg,transparent 17%,rgba(24,19,29,0.71) 71%,#211b29 90%)
+    background-image: linear-gradient(180deg,transparent 17%,rgba(255, 255, 255, 0.71) 71%,#ffffff 90%)
 }
 
 .cc-gradient-overlay.cc-for-lottie {
@@ -348,7 +348,7 @@ p {
     position: relative;
     padding-top: 5em;
     padding-bottom: 25em;
-    background-color: #211b29
+    background-color: white;
 }
 
 .s_intro.cc-set_height {
