@@ -17,8 +17,23 @@
             text-align: center;
         }
 
+        .wf-section {
+            min-height: 100vh;
+        }
+
+        .narasi2 {
+            color: white;
+            text-align: left;
+        }
+
         .yellow-text {
-            color: #ffc82d;
+            color: #f47d62;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .purple-text {
+            color: #b38dc1;
             font-style: italic;
             font-weight: bold;
         }
@@ -61,9 +76,8 @@
         }
 
         #bm {
-            background-color:#ffffff;
-            width:50%;
-            height:50%;
+            background-color: #ffffff;
+            width: 80%;
             margin: auto;
             padding: 30px;
         }
@@ -74,15 +88,123 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            max-width: 90vh;
+            width: 80%;
             margin: auto;
+        }
+
+        .flex-group {
+            height: 100vh;
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .flex-group .flex {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-group .flex2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .isi_flex {
             text-align: center;
         }
 
+        .isi_flex_samping {
+            text-align: left;
+        }
 
+        .counter {
+            margin: auto;
+        }
+
+        .wrapper span {
+            text-align: center;
+            color: black;
+            border: 5px solid;
+            padding: 0 20px;
+            border-radius: 10px;
+            margin: 30px 10px;
+        }
+
+        .box {
+            display: inline-block;
+            overflow: hidden;
+            height: 1em;
+            line-height: 1em;
+            font-weight: 1em;
+            font-size: 16em;
+        }
+
+        .box2 {
+            display: inline-block;
+            overflow: hidden;
+            height: 1em;
+            line-height: 1em;
+            font-weight: 1em;
+            font-size: 16em;
+        }
+
+        .box-fix {
+            display: inline-block;
+            overflow: hidden;
+            height: 1em;
+            line-height: 1em;
+            font-weight: 1em;
+            font-size: 16em;
+        }
+
+
+        .box:after {
+            position: relative;
+            white-space: pre;
+            content: "3\A 2\A 1\A 0\A 9\A 8\A 7\A 6\A 5";
+        }
+
+        .box2:after {
+            position: relative;
+            white-space: pre;
+            content: "2\A 1";
+        }
+
+        .box.fourth-number:after {
+            animation: animate 3s steps(8);
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        .box2.third-number:after {
+            animation: animate2 0.3s steps(9);
+            animation-delay: 1.8s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes animate {
+            0% {
+                top: -8em;
+            }
+
+            100% {
+                top: 0em;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -1em;
+            }
+
+            100% {
+                top: 0em;
+            }
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -131,7 +253,7 @@
                                         We?</div>
                                 </div>
                                 <p class="oleh">oleh Musafrizki Putri, Narezi Febriansa, dan Rengga Firmandika</p>
-                                <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
+                                <svg class="sticky" width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
                                     <path id="wheel" d="M123.359,79.775l0,72.843"
@@ -150,23 +272,40 @@
             </section>
 
             <div style="z-index: 2; position: relative;">
-                <section class="s_intro wf-section">    
+                <section class="s_intro wf-section">
                     <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex"> <div id="bm"></div>
-                        <h2 class="narasi" data-aos="fade-up" data-aos-duration="2000">Pada tahun 2015, melalui SDGs,
-                            pemerintah telah
-                            berkomitmen untuk mencapai
-                            <span class="yellow-text">no poverty</span> di
-                            tahun 2030
-                        </h2></div>
-                           
-                        
-                        
+                        <div class="isi_flex">
+                            <div id="bm"></div>
+                            <h2 class="narasi" data-aos="fade-up" data-aos-duration="2000">Pada tahun 2015, melalui
+                                SDGs,
+                                pemerintah <span class="yellow-text">Indonesia</span> beserta 193 negara lainnya telah
+                                berkomitmen untuk mencapai
+                                <span class="yellow-text">no poverty</span> di
+                                tahun 2030
+                            </h2>
+                        </div>
                     </div>
                 </section>
-
             </div>
-            <div style="z-index: 3; position: relative;"></div>
+            <!-- <div style="height:300px; width:100%; clear:both;"></div> -->
+            <div style="z-index: 3; position: relative;">
+                <section class="s_intro wf-section">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="isi_flex">
+                            <div id="counter" class="wrapper flex">
+                                <span class="box-fix first-number">2</span>
+                                <span class="box-fix second-number">0</span>
+                                <span class="box2 third-number"></span>
+                                <span class="box fourth-number"></span>
+                            </div>
+                            <h2 class="narasi " data-aos="fade-left" data-aos-duration="1000">Saat ini, setelah
+                                <span class="purple-text">delapan tahun</span> berlalu, sudah sejauh mana kita dalam
+                                mencapai komitmen tersebut?
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div style="z-index: 4; position: relative;"></div>
             <div style="z-index: 5; position: relative;"></div>
         </div>
