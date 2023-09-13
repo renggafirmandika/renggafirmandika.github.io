@@ -33,7 +33,7 @@
         }
 
         .purple-text {
-            color: #b38dc1;
+            color: #9059a3;
             font-style: italic;
             font-weight: bold;
         }
@@ -82,6 +82,11 @@
             padding: 30px;
         }
 
+        #animasi-tahun {
+            width: 80%;
+            margin: auto;
+        }
+
         .tampilan_grid {
             height: 100vh;
             display: flex;
@@ -95,7 +100,7 @@
         .flex-group {
             height: 100vh;
             display: flex;
-            width: 80%;
+            width: 100%;
             margin: auto;
         }
 
@@ -133,57 +138,17 @@
             margin: 30px 10px;
         }
 
-        .box {
+        .button-mulai {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
             display: inline-block;
-            overflow: hidden;
-            height: 1em;
-            line-height: 1em;
-            font-weight: 1em;
-            font-size: 16em;
-        }
-
-        .box2 {
-            display: inline-block;
-            overflow: hidden;
-            height: 1em;
-            line-height: 1em;
-            font-weight: 1em;
-            font-size: 16em;
-        }
-
-        .box-fix {
-            display: inline-block;
-            overflow: hidden;
-            height: 1em;
-            line-height: 1em;
-            font-weight: 1em;
-            font-size: 16em;
-        }
-
-
-        .box:after {
-            position: relative;
-            white-space: pre;
-            content: "3\A 2\A 1\A 0\A 9\A 8\A 7\A 6\A 5";
-        }
-
-        .box2:after {
-            position: relative;
-            white-space: pre;
-            content: "2\A 1";
-        }
-
-        .box.fourth-number:after {
-            animation: animate 3s steps(8);
-            animation-iteration-count: 1;
-            animation-fill-mode: backwards;
-        }
-
-        .box2.third-number:after {
-            animation: animate2 0.3s steps(9);
-            animation-delay: 1.8s;
-            animation-iteration-count: 1;
-            animation-fill-mode: backwards;
+            font-size: 25px;
+            margin: 4px 2px;
+            border-radius: 12px;
         }
 
         @keyframes animate {
@@ -204,6 +169,11 @@
             100% {
                 top: 0em;
             }
+        }
+
+        #chartdiv {
+            width: 80%;
+            height: 500px;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -274,7 +244,7 @@
             <div style="z-index: 2; position: relative;">
                 <section class="s_intro wf-section">
                     <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex">
+                        <div class="isi_flex" id="narasi-1">
                             <div id="bm"></div>
                             <h2 class="narasi" data-aos="fade-up" data-aos-duration="2000">Pada tahun 2015, melalui
                                 SDGs,
@@ -291,23 +261,37 @@
             <div style="z-index: 3; position: relative;">
                 <section class="s_intro wf-section">
                     <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex">
-                            <div id="counter" class="wrapper flex">
-                                <span class="box-fix first-number">2</span>
-                                <span class="box-fix second-number">0</span>
-                                <span class="box2 third-number"></span>
-                                <span class="box fourth-number"></span>
+                        <div class="isi_flex" id="narasi-2">
+                            <div id="animasi-tahun">
                             </div>
-                            <h2 class="narasi " data-aos="fade-left" data-aos-duration="1000">Saat ini, setelah
+                            <h2 class="narasi" data-aos="fade-left" data-aos-duration="1000">Saat ini, setelah
                                 <span class="purple-text">delapan tahun</span> berlalu, sudah sejauh mana kita dalam
                                 mencapai komitmen tersebut?
                             </h2>
+                            <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
+                                class="button button-mulai" id="button-mulai">Telusuri</button>
                         </div>
                     </div>
+
                 </section>
             </div>
             <div style="z-index: 4; position: relative;"></div>
-            <div style="z-index: 5; position: relative;"></div>
+            <section class="s_intro wf-section" id="section-proporsi">
+                <div class="c_main2 tampilan_grid">
+                    <div class="flex-group" id="narasi-3">
+                        <div class="col-lg-6 flex">
+                            <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000">Di tahun <span
+                                    class="purple-text">2023</span>, persentase penduduk miskin di Indonesia adalah
+                                sebesar
+                                <span class="purple-text">9,36%</span>
+                            </h2>
+                        </div>
+                        <div id="animasi-proporsi" class="col-lg-6 flex">
+                            <div id="chartdiv"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="z-index: 5; position: relative;"></div>
         </div>
     </main>
     <footer>
@@ -322,7 +306,15 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <script>
         AOS.init();
@@ -333,6 +325,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
 
     <script src="scripts/index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#section-proporsi").hide();
+        });
+
+
+
+        $("#button-mulai").click(function () {
+            $("#section-proporsi").show();
+            $("html").animate(
+                {
+                    scrollTop: $("#section-proporsi").offset().top
+                },
+                500
+            );
+            am5.ready(function () {
+
+                // Create root element
+                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                var root = am5.Root.new("chartdiv");
+
+                // Set themes
+                // https://www.amcharts.com/docs/v5/concepts/themes/
+                root.setThemes([
+                    am5themes_Animated.new(root)
+                ]);
+
+                // Create chart
+                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                var chart = root.container.children.push(
+                    am5percent.PieChart.new(root, {
+                        endAngle: 270
+                    })
+                );
+
+                // Create series
+                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                var series = chart.series.push(
+                    am5percent.PieSeries.new(root, {
+                        valueField: "value",
+                        categoryField: "category",
+                        endAngle: 270,
+                        alignLabels: false
+                    })
+                );
+
+                series.states.create("hidden", {
+                    endAngle: -90
+                });
+
+                // Set data
+                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                series.data.setAll([{
+                    category: "Miskin",
+                    value: 9.36
+                }, {
+                    category: "Tidak Miskin",
+                    value: 90.64
+                }]);
+
+                series.appear(1000, 1000);
+
+            });
+        });
+    </script>
+
+    <script>
+        // end am5.ready()
+    </script>
 </body>
 
 </html>
