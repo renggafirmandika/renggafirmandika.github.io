@@ -32,6 +32,16 @@
             font-weight: bold;
         }
 
+        .green-text {
+            color: #04AA6D;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .text-big {
+            font-size: 80px !important;
+        }
+
         .purple-text {
             color: #9059a3;
             font-style: italic;
@@ -87,6 +97,11 @@
             margin: auto;
         }
 
+        #animasi-grafik {
+            width: 80%;
+            margin: auto;
+        }
+
         .tampilan_grid {
             height: 100vh;
             display: flex;
@@ -102,11 +117,12 @@
             display: flex;
             width: 100%;
             margin: auto;
+            flex-wrap: wrap;
         }
 
         .flex-group .flex {
-            flex: 1;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
         }
@@ -174,6 +190,15 @@
         #chartdiv {
             width: 80%;
             height: 500px;
+        }
+
+        .centered {
+            margin: auto;
+        }
+
+        .break {
+            flex-basis: 100%;
+            height: 0;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -272,26 +297,54 @@
                                 class="button button-mulai" id="button-mulai">Telusuri</button>
                         </div>
                     </div>
-
                 </section>
             </div>
-            <div style="z-index: 4; position: relative;"></div>
-            <section class="s_intro wf-section" id="section-proporsi">
-                <div class="c_main2 tampilan_grid">
-                    <div class="flex-group" id="narasi-3">
-                        <div class="col-lg-6 flex">
-                            <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000">Di tahun <span
-                                    class="purple-text">2023</span>, persentase penduduk miskin di Indonesia adalah
-                                sebesar
-                                <span class="purple-text">9,36%</span>
-                            </h2>
+            <div style="z-index: 4; position: relative;">
+                <section class="s_intro wf-section" id="section-proporsi">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="flex-group" id="narasi-3">
+                            <div class="col-lg-6 flex">
+                                <div>
+                                    <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000">Di tahun <span
+                                            class="yellow-text">2023</span>, persentase penduduk miskin di Indonesia adalah
+                                        sebesar
+                                        <span class="yellow-text">9,36%</span>
+                                    </h2>
+                                    <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="3000">
+                                        Ini berarti, <span class="yellow-text text-big">1</span> dari <span class="yellow-text text-big">10</span> orang Indonesia masuk dalam kategori
+                                        <span class="yellow-text">miskin</span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div id="animasi-proporsi" class="col-lg-6 flex">
+                                <div>
+                                    <div id="chartdiv" class="centered"></div>
+                                    <div id="animasi-orang" class="centered" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="3000"></div>
+                                </div>
+                            </div>
+                           
+                            <!-- <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                                    class="button button-mulai centered" id="button-lanjut1">Lanjutkan</button> -->
                         </div>
-                        <div id="animasi-proporsi" class="col-lg-6 flex">
-                            <div id="chartdiv"></div>
+                         
+                    </div>
+                </section>
+            </div>  
+            <div style="z-index: 5; position: relative;">
+                <section class="s_intro wf-section" id="section-grafik">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="isi_flex" id="narasi-4">
+                            <div id="animasi-grafik">
+                            </div>
+                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span class="green-text">2015-2022</span>, penduduk yang miskin ekstrem telah berkurang menjadi <span class="green-text">hampir seperempatnya</span>
+                            </h2>
+                            
+                            <!-- <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
+                                class="button button-mulai" id="button-mulai">Lanjutkan</button> -->
                         </div>
                     </div>
-                </div>
-                <div style="z-index: 5; position: relative;"></div>
+                </section>
+            </div>
         </div>
     </main>
     <footer>
@@ -329,15 +382,15 @@
     <script>
         $(document).ready(function () {
             $("#section-proporsi").hide();
+            $("#section-grafik").hide();
         });
-
-
 
         $("#button-mulai").click(function () {
             $("#section-proporsi").show();
+            $("#section-grafik").show();
             $("html").animate(
                 {
-                    scrollTop: $("#section-proporsi").offset().top
+                    scrollTop: $("#section-proporsi").offset().top + 100
                 },
                 500
             );
@@ -390,6 +443,16 @@
 
             });
         });
+
+        // $("#button-lanjut1").click(function () {
+        //     $("#section-grafik").show();
+        //     $("html").animate(
+        //         {
+        //             scrollTop: $("#section-grafik").offset().top
+        //         },
+        //         500
+        //     );
+        // });
     </script>
 
     <script>
