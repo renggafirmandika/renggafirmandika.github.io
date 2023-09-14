@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Webstory Kemiskinan</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,6 +32,11 @@
             text-align: center;
         }
 
+        .narasi-dark {
+            color: white !important;
+            text-align: center;
+        }
+
         .wf-section {
             min-height: 100vh;
         }
@@ -43,6 +48,12 @@
 
         .yellow-text {
             color: #f47d62;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .orange-text {
+            color: #ff4c49;
             font-style: italic;
             font-weight: bold;
         }
@@ -113,6 +124,11 @@
         }
 
         #animasi-grafik {
+            width: 80%;
+            margin: auto;
+        }
+
+        #animasi-panah {
             width: 80%;
             margin: auto;
         }
@@ -256,6 +272,10 @@
             border-radius: 1.625rem;
         }
 
+        button.learn-more .circle-dark {
+            background: white !important;
+        }
+
         button.learn-more .circle .icon {
             transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
             position: absolute;
@@ -265,7 +285,19 @@
             background: #fff;
         }
 
+        button.learn-more .circle-dark .icon-dark {
+            background: black !important;
+        }
+
         button.learn-more .circle .icon.arrow {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        }
+
+        button.learn-more .circle-dark .icon-dark.arrow-dark {
             transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
             left: 0.625rem;
             width: 1.125rem;
@@ -282,6 +314,17 @@
             height: 0.625rem;
             border-top: 0.125rem solid #fff;
             border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+        }
+        button.learn-more .circle-dark .icon-dark.arrow-dark::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid black;
+            border-right: 0.125rem solid black;
             transform: rotate(45deg);
         }
 
@@ -301,6 +344,22 @@
             text-transform: uppercase;
         }
 
+        button.learn-more .button-text-dark {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: white;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
         button:hover .circle {
             width: 100%;
         }
@@ -310,8 +369,17 @@
             transform: translate(1rem, 0);
         }
 
+        button:hover .circle-dark .icon-dark.arrow-dark {
+            background: black;
+            transform: translate(1rem, 0);
+        }
+
         button:hover .button-text {
             color: #fff;
+        }
+
+        button:hover .button-text-dark {
+            color: black;
         }
 
         @supports (display: grid) {
@@ -321,6 +389,10 @@
                 justify-self: center;
                 margin: auto;
             }
+        }
+
+        .section-dark {
+            background-color: black !important;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -474,7 +546,7 @@
                             <div id="animasi-grafik">
                             </div>
                             <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span
-                                    class="green-text">2015-2022</span>, penduduk yang miskin ekstrem telah berkurang
+                                    class="green-text">2015-2022</span>, penduduk yang  <span class="green-text">miskin ekstrem</span> telah berkurang
                                 menjadi <span class="green-text">hampir seperempatnya</span>, dari <span
                                     class="green-text">8.28%</span> menjadi <span class="green-text">2.47%</span>.
                             </h2>
@@ -490,6 +562,28 @@
                                         <span class="icon arrow"></span>
                                     </span>
                                     <span class="button-text">Selanjutnya</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div style="z-index: 6; position: relative;">
+                <section class="s_intro wf-section section-dark" id="section-panah">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="isi_flex" id="narasi-5">
+                            <div id="animasi-panah">
+                            </div>
+                            <h2 class="narasi narasi-dark" data-aos="zoom-in" data-aos-duration="1000">Namun, upaya-upaya ini masih menghadapi tantangan <span
+                                    class="orange-text">Akurasi</span>.
+                            </h2>
+
+                            <div id="container-button">
+                                <button id="button-next-panah" class="learn-more">
+                                    <span class="circle circle-dark" aria-hidden="true">
+                                        <span class="icon arrow icon-dark arrow-dark"></span>
+                                    </span>
+                                    <span class="button-text-dark">Selanjutnya</span>
                                 </button>
                             </div>
                         </div>
@@ -537,6 +631,7 @@
             $("#narasi-grafik-2").css('opacity', 0);
             $("#narasi-orang").css('opacity', 0);
             $("#animasi-orang").css('opacity', 0);
+            $("#section-panah").hide();
         });
 
         $("#button-next-orang").click(function () {
@@ -545,6 +640,7 @@
                 $("#animasi-orang").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
+                $("#section-grafik").show();
                 $("html").animate(
                     {
                         scrollTop: $("#section-grafik").offset().top + 100
@@ -559,12 +655,20 @@
             if ($("#narasi-grafik-2").css('opacity') == 0) {
                 $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
+            else {
+                $("#section-panah").show();
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-panah").offset().top + 100
+                    },
+                    500
+                );
+            }
 
         });
 
         $("#button-mulai").click(function () {
             $("#section-proporsi").show();
-            $("#section-grafik").show();
             $("html").animate(
                 {
                     scrollTop: $("#section-proporsi").offset().top + 100
