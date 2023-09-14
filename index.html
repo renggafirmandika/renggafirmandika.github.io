@@ -316,6 +316,7 @@
             border-right: 0.125rem solid #fff;
             transform: rotate(45deg);
         }
+
         button.learn-more .circle-dark .icon-dark.arrow-dark::before {
             position: absolute;
             content: '';
@@ -546,7 +547,8 @@
                             <div id="animasi-grafik">
                             </div>
                             <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span
-                                    class="green-text">2015-2022</span>, penduduk yang  <span class="green-text">miskin ekstrem</span> telah berkurang
+                                    class="green-text">2015-2022</span>, penduduk yang <span class="green-text">miskin
+                                    ekstrem</span> telah berkurang
                                 menjadi <span class="green-text">hampir seperempatnya</span>, dari <span
                                     class="green-text">8.28%</span> menjadi <span class="green-text">2.47%</span>.
                             </h2>
@@ -569,13 +571,51 @@
                 </section>
             </div>
             <div style="z-index: 6; position: relative;">
+                <section class="s_intro wf-section" id="section-program">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="flex-group" id="narasi-5">
+                            <div class="col-lg-6 flex">
+                                <div>
+                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Untuk itu,
+                                        pemerintah Indonesia menggulirkan beberapa bantuan sosial, seperti:
+                                    </h2>
+                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Kartu Keluarga
+                                        Sejahtera (KKS)
+                                    </h2>
+                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">BPNT/Program Sembako
+                                    </h2>
+                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Program Indonesia
+                                        Pintar (PIP)
+                                    </h2>
+                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Program Keluarga
+                                        Harapan (PKH)
+                                    </h2>
+                                </div>
+                            </div>
+                            <div id="animasi-program" class="col-lg-6 flex">
+                            </div>
+
+                            <div id="container-button">
+                                <button id="button-next-program" class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Selanjutnya</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <div style="z-index: 7; position: relative;">
                 <section class="s_intro wf-section section-dark" id="section-panah">
                     <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex" id="narasi-5">
+                        <div class="isi_flex" id="narasi-6">
                             <div id="animasi-panah">
                             </div>
-                            <h2 class="narasi narasi-dark" data-aos="zoom-in" data-aos-duration="1000">Namun, upaya-upaya ini masih menghadapi tantangan <span
-                                    class="orange-text">Akurasi</span>.
+                            <h2 class="narasi narasi-dark" data-aos="zoom-in" data-aos-duration="1000">Namun,
+                                upaya-upaya ini masih menghadapi tantangan <span class="orange-text">Akurasi</span>.
                             </h2>
 
                             <div id="container-button">
@@ -631,6 +671,7 @@
             $("#narasi-grafik-2").css('opacity', 0);
             $("#narasi-orang").css('opacity', 0);
             $("#animasi-orang").css('opacity', 0);
+            $("#section-program").hide();
             $("#section-panah").hide();
         });
 
@@ -656,14 +697,25 @@
                 $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-panah").show();
+                $("#section-program").show();
                 $("html").animate(
                     {
-                        scrollTop: $("#section-panah").offset().top + 100
+                        scrollTop: $("#section-program").offset().top + 100
                     },
                     500
                 );
             }
+        });
+
+        $("#button-next-program").click(function () {
+
+            $("#section-panah").show();
+            $("html").animate(
+                {
+                    scrollTop: $("#section-panah").offset().top + 100
+                },
+                500
+            );
 
         });
 
