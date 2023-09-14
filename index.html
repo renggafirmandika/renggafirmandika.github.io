@@ -12,6 +12,21 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         .narasi {
             color: white;
             text-align: center;
@@ -200,6 +215,113 @@
             flex-basis: 100%;
             height: 0;
         }
+
+        .highlight {
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .highlight-green {
+            background-color: #04AA6D;
+        }
+
+        button {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            vertical-align: middle;
+            text-decoration: none;
+            background: transparent;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        button.learn-more {
+            width: 12rem;
+            height: auto;
+        }
+
+        button.learn-more .circle {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: #282936;
+            border-radius: 1.625rem;
+        }
+
+        button.learn-more .circle .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #fff;
+        }
+
+        button.learn-more .circle .icon.arrow {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        }
+
+        button.learn-more .circle .icon.arrow::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+        }
+
+        button.learn-more .button-text {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: #282936;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        button:hover .circle {
+            width: 100%;
+        }
+
+        button:hover .circle .icon.arrow {
+            background: #fff;
+            transform: translate(1rem, 0);
+        }
+
+        button:hover .button-text {
+            color: #fff;
+        }
+
+        @supports (display: grid) {
+            #container-button {
+                grid-area: main;
+                align-self: center;
+                justify-self: center;
+                margin: auto;
+            }
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -293,8 +415,15 @@
                                 <span class="purple-text">delapan tahun</span> berlalu, sudah sejauh mana kita dalam
                                 mencapai komitmen tersebut?
                             </h2>
-                            <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
-                                class="button button-mulai" id="button-mulai">Telusuri</button>
+                            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
+                                id="container-button">
+                                <button id="button-mulai" class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Telusuri</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -306,12 +435,14 @@
                             <div class="col-lg-6 flex">
                                 <div>
                                     <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000">Di tahun <span
-                                            class="yellow-text">2023</span>, persentase penduduk miskin di Indonesia adalah
+                                            class="yellow-text">2023</span>, persentase penduduk miskin di Indonesia
+                                        adalah
                                         sebesar
                                         <span class="yellow-text">9,36%</span>
                                     </h2>
-                                    <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="3000">
-                                        Ini berarti, <span class="yellow-text text-big">1</span> dari <span class="yellow-text text-big">10</span> orang Indonesia masuk dalam kategori
+                                    <h2 class="narasi2" id="narasi-orang">
+                                        Ini berarti, <span class="yellow-text text-big">1</span> dari <span
+                                            class="yellow-text text-big">10</span> orang Indonesia masuk dalam kategori
                                         <span class="yellow-text">miskin</span>
                                     </h2>
                                 </div>
@@ -319,28 +450,48 @@
                             <div id="animasi-proporsi" class="col-lg-6 flex">
                                 <div>
                                     <div id="chartdiv" class="centered"></div>
-                                    <div id="animasi-orang" class="centered" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="3000"></div>
+                                    <div id="animasi-orang"></div>
                                 </div>
                             </div>
-                           
-                            <!-- <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500"
-                                    class="button button-mulai centered" id="button-lanjut1">Lanjutkan</button> -->
+
+                            <div id="container-button">
+                                <button id="button-next-orang" class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Selanjutnya</span>
+                                </button>
+                            </div>
                         </div>
-                         
+
                     </div>
                 </section>
-            </div>  
+            </div>
             <div style="z-index: 5; position: relative;">
                 <section class="s_intro wf-section" id="section-grafik">
                     <div class="c_main2 tampilan_grid">
                         <div class="isi_flex" id="narasi-4">
                             <div id="animasi-grafik">
                             </div>
-                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span class="green-text">2015-2022</span>, penduduk yang miskin ekstrem telah berkurang menjadi <span class="green-text">hampir seperempatnya</span>
+                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span
+                                    class="green-text">2015-2022</span>, penduduk yang miskin ekstrem telah berkurang
+                                menjadi <span class="green-text">hampir seperempatnya</span>, dari <span
+                                    class="green-text">8.28%</span> menjadi <span class="green-text">2.47%</span>.
                             </h2>
-                            
-                            <!-- <button data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
-                                class="button button-mulai" id="button-mulai">Lanjutkan</button> -->
+                            <h2 id="narasi-grafik-2" class="narasi" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="4000">Angka
+                                <span class="green-text">2.47%</span> ini setara dengan <mark
+                                    class="highlight highlight-green">6.8 juta orang</mark>.
+                            </h2>
+
+                            <div id="container-button">
+                                <button id="button-next-grafik" class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Selanjutnya</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -383,6 +534,32 @@
         $(document).ready(function () {
             $("#section-proporsi").hide();
             $("#section-grafik").hide();
+            $("#narasi-grafik-2").css('opacity', 0);
+            $("#narasi-orang").css('opacity', 0);
+            $("#animasi-orang").css('opacity', 0);
+        });
+
+        $("#button-next-orang").click(function () {
+            if ($("#narasi-orang").css('opacity') == 0) {
+                $("#narasi-orang").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                $("#animasi-orang").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+            }
+            else {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-grafik").offset().top + 100
+                    },
+                    500
+                );
+            }
+
+        });
+
+        $("#button-next-grafik").click(function () {
+            if ($("#narasi-grafik-2").css('opacity') == 0) {
+                $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+            }
+
         });
 
         $("#button-mulai").click(function () {
