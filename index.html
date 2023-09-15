@@ -64,6 +64,12 @@
             font-weight: bold;
         }
 
+        .blue-text {
+            color: #81d1f0;
+            font-style: italic;
+            font-weight: bold;
+        }
+
         .text-big {
             font-size: 80px !important;
         }
@@ -82,6 +88,12 @@
             color: black !important;
             font-family: "Google Sans", "Noto Sans", sans-serif !important;
             font-weight: 500 !important;
+        }
+
+        h3 {
+            color: black !important;
+            font-family: "Google Sans", "Noto Sans", sans-serif !important;
+            font-weight: 400 !important;
         }
 
         .oleh {
@@ -138,13 +150,12 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
             width: 80%;
             margin: auto;
         }
 
         .flex-group {
-            height: 100vh;
             display: flex;
             width: 100%;
             margin: auto;
@@ -155,7 +166,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
         }
 
         .flex-group .flex2 {
@@ -167,6 +178,7 @@
         .isi_flex {
             text-align: center;
         }
+
 
         .isi_flex_samping {
             text-align: left;
@@ -384,17 +396,47 @@
         }
 
         @supports (display: grid) {
-            #container-button {
+            .container-button {
                 grid-area: main;
                 align-self: center;
                 justify-self: center;
                 margin: auto;
+                align-items: center;
+                align-content: center;
             }
         }
 
         .section-dark {
             background-color: black !important;
         }
+
+        .container-gambar {
+            padding: 20px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100vw;
+            max-height: 100vh;
+            object-fit: cover;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
     </style>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -414,7 +456,8 @@
                         <div data-w-id="8f8e4dc1-3264-5252-5bc7-4abf04dd76d9"
                             style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
                             class="b_nav-bar">
-                            <p class="oleh oleh2">Seberapa jauh Indonesia telah berhasil dalam memberantas kemiskinan?
+                            <p class="oleh oleh2">Seberapa jauh Indonesia telah berhasil dalam memberantas
+                                kemiskinan?
                             </p>
 
                         </div>
@@ -468,7 +511,8 @@
                             <div id="bm"></div>
                             <h2 class="narasi" data-aos="fade-up" data-aos-duration="2000">Pada tahun 2015, melalui
                                 SDGs,
-                                pemerintah <span class="yellow-text">Indonesia</span> beserta 193 negara lainnya telah
+                                pemerintah <span class="yellow-text">Indonesia</span> beserta 193 negara lainnya
+                                telah
                                 berkomitmen untuk mencapai
                                 <span class="yellow-text">no poverty</span> di
                                 tahun 2030
@@ -488,15 +532,15 @@
                                 <span class="purple-text">delapan tahun</span> berlalu, sudah sejauh mana kita dalam
                                 mencapai komitmen tersebut?
                             </h2>
-                            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000"
-                                id="container-button">
-                                <button id="button-mulai" class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">Telusuri</span>
-                                </button>
-                            </div>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="2000"
+                            class="container-button last-item">
+                            <button id="button-mulai" class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Telusuri</span>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -515,7 +559,8 @@
                                     </h2>
                                     <h2 class="narasi2" id="narasi-orang">
                                         Ini berarti, <span class="yellow-text text-big">1</span> dari <span
-                                            class="yellow-text text-big">10</span> orang Indonesia masuk dalam kategori
+                                            class="yellow-text text-big">10</span> orang Indonesia masuk dalam
+                                        kategori
                                         <span class="yellow-text">miskin</span>
                                     </h2>
                                 </div>
@@ -526,17 +571,16 @@
                                     <div id="animasi-orang"></div>
                                 </div>
                             </div>
-
-                            <div id="container-button">
-                                <button id="button-next-orang" class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">Selanjutnya</span>
-                                </button>
-                            </div>
                         </div>
-
+                        <div class="container-button last-item" data-aos="zoom-in" data-aos-duration="1000"
+                            data-aos-delay="1000">
+                            <button id="button-next-orang" class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Selanjutnya</span>
+                            </button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -557,45 +601,54 @@
                                 <span class="green-text">2.47%</span> ini setara dengan <mark
                                     class="highlight highlight-green">6.8 juta orang</mark>.
                             </h2>
-
-                            <div id="container-button">
-                                <button id="button-next-grafik" class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">Selanjutnya</span>
-                                </button>
-                            </div>
+                        </div>
+                        <div class="container-button last-item" data-aos="zoom-in" data-aos-duration="1000"
+                            data-aos-delay="1000">
+                            <button id="button-next-grafik" class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Selanjutnya</span>
+                            </button>
                         </div>
                     </div>
                 </section>
             </div>
-            <div style="z-index: 6; position: relative;">
-                <section class="s_intro wf-section" id="section-program">
-                    <div class="c_main2 tampilan_grid">
-                        <div class="flex-group" id="narasi-5">
-                            <div class="col-lg-6 flex">
-                                <div>
-                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Untuk itu,
-                                        pemerintah Indonesia menggulirkan beberapa bantuan sosial, seperti:
-                                    </h2>
-                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Kartu Keluarga
-                                        Sejahtera (KKS)
-                                    </h2>
-                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">BPNT/Program Sembako
-                                    </h2>
-                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Program Indonesia
-                                        Pintar (PIP)
-                                    </h2>
-                                    <h2 class="narasi2" data-aos="zoom-in" data-aos-duration="1000">Program Keluarga
-                                        Harapan (PKH)
-                                    </h2>
+            <div class="panels">
+                <div style="z-index: 6; position: relative;" class="pin">
+                    <section class="s_intro wf-section" id="section-program">
+                        <div class="c_main2 tampilan_grid">
+                            <div class="isi_flex" id="narasi-5">
+                                <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Untuk itu,
+                                    pemerintah Indonesia menggulirkan beberapa <span class="yellow-text">program
+                                        bantuan sosial</span>, seperti:
+                                </h2>
+                                <div class="flex-group">
+                                    <div class="col-lg-4 flex container-gambar" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="300">
+                                        <img src="assets/kks.png" alt="">
+                                        <h3 class="narasi">Kartu Keluarga
+                                            Sejahtera (KKS) dan BPNT/Program Sembako
+                                        </h3>
+                                    </div>
+                                    <div class="col-lg-4 flex container-gambar" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="600">
+                                        <img src="assets/kip.png" alt="">
+                                        <h3 class="narasi">Program Indonesia
+                                            Pintar (PIP)
+                                        </h3>
+                                    </div>
+                                    <div class="col-lg-4 flex container-gambar" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="900">
+                                        <img src="assets/pkh.png" alt="">
+                                        <h3 class="narasi">Program Keluarga
+                                            Harapan (PKH)
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                            <div id="animasi-program" class="col-lg-6 flex">
-                            </div>
-
-                            <div id="container-button">
+                            <div class="container-button last-item" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="1000">
                                 <button id="button-next-program" class="learn-more">
                                     <span class="circle" aria-hidden="true">
                                         <span class="icon arrow"></span>
@@ -603,22 +656,31 @@
                                     <span class="button-text">Selanjutnya</span>
                                 </button>
                             </div>
+
                         </div>
+                    </section>
+                </div>
 
-                    </div>
-                </section>
-            </div>
-            <div style="z-index: 7; position: relative;">
-                <section class="s_intro wf-section section-dark" id="section-panah">
-                    <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex" id="narasi-6">
-                            <div id="animasi-panah">
+                <div style="z-index: 7; position: relative;">
+                    <section class="s_intro wf-section section-dark" id="section-panah">
+                        <div class="c_main2 tampilan_grid">
+                            <div class="isi_flex" id="narasi-6">
+                                <div id="animasi-panah">
+                                </div>
+                                <h2 class="narasi narasi-dark" data-aos="zoom-in" data-aos-duration="1000">Namun,
+                                    upaya-upaya ini masih menghadapi tantangan <span class="orange-text">Akurasi</span>.
+                                </h2>
+                                <h2 id="narasi-panah-2" class="narasi narasi-dark" data-aos="zoom-in"
+                                    data-aos-duration="1000">Berdasarkan
+                                    hasil <span class="orange-text">Susenas Maret 2022</span>, masih ditemukan penduduk
+                                    yang memiliki pengeluaran <span class="orange-text">20 persen teratas</span>
+                                    menerima program bantuan sosial.
+                                </h2>
+
+
                             </div>
-                            <h2 class="narasi narasi-dark" data-aos="zoom-in" data-aos-duration="1000">Namun,
-                                upaya-upaya ini masih menghadapi tantangan <span class="orange-text">Akurasi</span>.
-                            </h2>
-
-                            <div id="container-button">
+                            <div class="container-button last-item" data-aos="zoom-in" data-aos-duration="1000"
+                                data-aos-delay="1000">
                                 <button id="button-next-panah" class="learn-more">
                                     <span class="circle circle-dark" aria-hidden="true">
                                         <span class="icon arrow icon-dark arrow-dark"></span>
@@ -627,8 +689,47 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
+                <div style="z-index: 8; position: relative;">
+                    <section class="s_intro wf-section section-dark" id="section-regsosek">
+                        <div class="c_main2 tampilan_grid video-container hideme">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="assets/video.mp4" type="video/mp4">
+                            </video>
+                            <div class="content isi_flex">
+                                <h2 class="narasi narasi-dark">Oleh karena itu, pemerintah berkomitmen untuk melakukan
+                                    <span class="blue-text">Reformasi Sistem Perlindungan Sosial</span>, yang tertuang
+                                    pada <span class="blue-text">Rencana Kerja Pemerintah/RKP 2022</span>.
+                                </h2>
+                                <h2 id="narasi-regsosek-2" class="narasi narasi-dark">Salah satunya melalui program
+                                    <span class="blue-text">Registrasi Sosial Ekonomi (Regsosek)</span>.
+                                </h2>
+                                <!-- Use a button to pause/play the video with JavaScript -->
+                                <div class="container-button">
+                                    <button id="button-next-regsosek" class="learn-more">
+                                        <span class="circle circle-dark" aria-hidden="true">
+                                            <span class="icon arrow icon-dark arrow-dark"></span>
+                                        </span>
+                                        <span class="button-text-dark">Selanjutnya</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div style="z-index: 8; position: relative;">
+                    <section class="s_intro wf-section section" id="section-closing">
+                        <div class="c_main2 tampilan_grid">
+                            <div class="isi_flex" id="narasi-8">
+                                <div id="animasi-closing">
+                                </div>
+                                <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Can we end poverty? <span data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000">Let's believe the answer is <span class="orange-text">Yes</span>.</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
@@ -664,16 +765,38 @@
 
     <script src="scripts/index.js"></script>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+
     <script>
         $(document).ready(function () {
             $("#section-proporsi").hide();
             $("#section-grafik").hide();
             $("#narasi-grafik-2").css('opacity', 0);
+            $("#narasi-panah-2").css('opacity', 0);
             $("#narasi-orang").css('opacity', 0);
             $("#animasi-orang").css('opacity', 0);
+            $("#narasi-regsosek-2").css('opacity', 0);
+            $(".hideme").css('opacity', 0);
             $("#section-program").hide();
             $("#section-panah").hide();
+            $("#section-regsosek").hide();
+
+            $(window).scroll(function () {
+                $('.hideme').each(function (i) {
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if (bottom_of_window > bottom_of_object) {
+                        $(this).animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                    }
+                    if (bottom_of_window < bottom_of_object) {
+                        $(this).animate({ opacity: 0 }, { queue: false, duration: 'slow' });
+                    }
+                });
+            });
         });
+
+
 
         $("#button-next-orang").click(function () {
             if ($("#narasi-orang").css('opacity') == 0) {
@@ -689,7 +812,21 @@
                     500
                 );
             }
+        });
 
+        $("#button-next-panah").click(function () {
+            if ($("#narasi-panah-2").css('opacity') == 0) {
+                $("#narasi-panah-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+            }
+            else {
+                $("#section-regsosek").show();
+                $("html").animate(
+                    {
+                        scrollTop: $("#myVideo").offset().top
+                    },
+                    500
+                );
+            }
         });
 
         $("#button-next-grafik").click(function () {
@@ -707,74 +844,99 @@
             }
         });
 
+        $("#button-next-regsosek").click(function () {
+            if ($("#narasi-regsosek-2").css('opacity') == 0) {
+                $("#narasi-regsosek-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+            }
+            else {
+                $("#section-closing").show();
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-closing").offset().top + 100
+                    },
+                    500
+                );
+            }
+        });
+
         $("#button-next-program").click(function () {
 
             $("#section-panah").show();
             $("html").animate(
                 {
-                    scrollTop: $("#section-panah").offset().top + 100
+                    scrollTop: $("#section-panah").offset().top + 100,
                 },
-                500
+                'slow'
             );
 
         });
 
         $("#button-mulai").click(function () {
-            $("#section-proporsi").show();
-            $("html").animate(
-                {
-                    scrollTop: $("#section-proporsi").offset().top + 100
-                },
-                500
-            );
-            am5.ready(function () {
-
-                // Create root element
-                // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                var root = am5.Root.new("chartdiv");
-
-                // Set themes
-                // https://www.amcharts.com/docs/v5/concepts/themes/
-                root.setThemes([
-                    am5themes_Animated.new(root)
-                ]);
-
-                // Create chart
-                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-                var chart = root.container.children.push(
-                    am5percent.PieChart.new(root, {
-                        endAngle: 270
-                    })
+            if ($("#section-proporsi").is(":hidden")) {
+                $("#section-proporsi").show();
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-proporsi").offset().top + 100
+                    },
+                    500
                 );
+                am5.ready(function () {
 
-                // Create series
-                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-                var series = chart.series.push(
-                    am5percent.PieSeries.new(root, {
-                        valueField: "value",
-                        categoryField: "category",
-                        endAngle: 270,
-                        alignLabels: false
-                    })
-                );
+                    // Create root element
+                    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                    var root = am5.Root.new("chartdiv");
 
-                series.states.create("hidden", {
-                    endAngle: -90
+                    // Set themes
+                    // https://www.amcharts.com/docs/v5/concepts/themes/
+                    root.setThemes([
+                        am5themes_Animated.new(root)
+                    ]);
+
+                    // Create chart
+                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                    var chart = root.container.children.push(
+                        am5percent.PieChart.new(root, {
+                            endAngle: 270
+                        })
+                    );
+
+                    // Create series
+                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                    var series = chart.series.push(
+                        am5percent.PieSeries.new(root, {
+                            valueField: "value",
+                            categoryField: "category",
+                            endAngle: 270,
+                            alignLabels: false
+                        })
+                    );
+
+                    series.states.create("hidden", {
+                        endAngle: -90
+                    });
+
+                    // Set data
+                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                    series.data.setAll([{
+                        category: "Miskin",
+                        value: 9.36
+                    }, {
+                        category: "Tidak Miskin",
+                        value: 90.64
+                    }]);
+
+                    series.appear(1000, 1000);
+
                 });
-
-                // Set data
-                // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-                series.data.setAll([{
-                    category: "Miskin",
-                    value: 9.36
-                }, {
-                    category: "Tidak Miskin",
-                    value: 90.64
-                }]);
-
-                series.appear(1000, 1000);
-
-            });
+            }
+            else {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-proporsi").offset().top + 100
+                    },
+                    500
+                );
+            }
         });
 
         // $("#button-lanjut1").click(function () {
@@ -788,9 +950,18 @@
         // });
     </script>
 
-    <script>
-        // end am5.ready()
-    </script>
+
+    <!-- <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let st = ScrollTrigger.create({
+            trigger: ".panels",
+            pin: ".pin",
+            start: "top top",
+            end: "bottom bottom",
+            pinSpacing: false,
+        });
+    </script> -->
 </body>
 
 </html>
