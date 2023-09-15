@@ -254,6 +254,10 @@
             background-color: #04AA6D;
         }
 
+        .highlight-orange {
+            background-color: #ff4c49;
+        }
+
         button {
             position: relative;
             display: inline-block;
@@ -436,7 +440,6 @@
             width: 100%;
             padding: 20px;
         }
-
     </style>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -590,8 +593,9 @@
                         <div class="isi_flex" id="narasi-4">
                             <div id="animasi-grafik">
                             </div>
-                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Sepanjang <span
-                                    class="green-text">2015-2022</span>, penduduk yang <span class="green-text">miskin
+                            <h2 id="narasi-grafik-1" class="narasi" data-aos="zoom-in" data-aos-duration="1000">
+                                Sepanjang <span class="green-text">2015-2022</span>, penduduk yang <span
+                                    class="green-text">miskin
                                     ekstrem</span> telah berkurang
                                 menjadi <span class="green-text">hampir seperempatnya</span>, dari <span
                                     class="green-text">8.28%</span> menjadi <span class="green-text">2.47%</span>.
@@ -724,7 +728,9 @@
                             <div class="isi_flex" id="narasi-8">
                                 <div id="animasi-closing">
                                 </div>
-                                <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Can we end poverty? <span data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000">Let's believe the answer is <span class="orange-text">Yes</span>.</span>
+                                <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Can we end poverty? <span
+                                        data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000">Let's believe
+                                        the answer is <span class="orange-text">Yes</span>.</span>
                                 </h2>
                             </div>
                         </div>
@@ -769,6 +775,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script> -->
 
     <script>
+        var flagGrafik = 1;
         $(document).ready(function () {
             $("#section-proporsi").hide();
             $("#section-grafik").hide();
@@ -781,6 +788,7 @@
             $("#section-program").hide();
             $("#section-panah").hide();
             $("#section-regsosek").hide();
+            $("#section-closing").hide();
 
             $(window).scroll(function () {
                 $('.hideme').each(function (i) {
@@ -830,17 +838,36 @@
         });
 
         $("#button-next-grafik").click(function () {
-            if ($("#narasi-grafik-2").css('opacity') == 0) {
-                $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+            if (flagGrafik == 1) {
+                if ($("#narasi-grafik-2").css('opacity') == 0) {
+                    $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                    console.log(flagGrafik);
+                }
+                else if ($("#narasi-grafik-2").css('opacity') == 1) {
+                    anim4.playSegments([90,240], true);
+                    $("#narasi-grafik-1").fadeOut();
+                    $("#narasi-grafik-2").animate({ opacity: 0 }, { queue: false, duration: 'slow' });
+                    $("#narasi-grafik-1").html('Sementara itu, <span class="orange-text">kemiskinan nasional</span> dari tahun <span class="orange-text">2015-2023</span> hanya berkurang sebesar <span class= "orange-text">1,86%</span>.');
+                    $("#narasi-grafik-1").fadeIn();
+                    flagGrafik = 2;
+                    console.log(flagGrafik);
+                }
             }
             else {
-                $("#section-program").show();
-                $("html").animate(
-                    {
-                        scrollTop: $("#section-program").offset().top + 100
-                    },
-                    500
-                );
+                if ($("#narasi-grafik-2").css('opacity') == 0) {
+                    $("#narasi-grafik-2").html('Atau masih sekitar <mark class="highlight highlight-orange">26 juta penduduk miskin</mark>.');
+                    $("#narasi-grafik-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                    console.log(flagGrafik);
+                }
+                else {
+                    $("#section-program").show();
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-program").offset().top + 100
+                        },
+                        500
+                    );
+                }
             }
         });
 
