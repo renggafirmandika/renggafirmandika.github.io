@@ -23,6 +23,10 @@ body {
     text-align: center;
 }
 
+.narasi-mid {
+    font-size: 2.5em !important;
+}
+
 .wf-section {
     min-height: 100vh;
 }
@@ -182,7 +186,7 @@ svg #wheel {
     }
 
     #animasi-povertyline {
-        width: 70%;
+        width: 90%;
         margin: auto;
     }
 }

@@ -34,13 +34,13 @@ var params2 = {
     animationData: animationTahun,
 };
 
-var params3 = {
-    container: document.getElementById('animasi-orang'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData: animationOrang,
-};
+// var params3 = {
+//     container: document.getElementById('animasi-orang'),
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true,
+//     animationData: animationOrang,
+// };
 
 var params4 = {
     container: document.getElementById('animasi-grafik'),
@@ -103,7 +103,7 @@ var animPovertyline;
 
 var svgLocation1 = document.getElementById('narasi-1').getBoundingClientRect();
 var svgLocation2 = document.getElementById('narasi-2').getBoundingClientRect();
-var svgLocation3 = document.getElementById('narasi-3').getBoundingClientRect();
+// var svgLocation3 = document.getElementById('narasi-3').getBoundingClientRect();
 var svgLocation4 = document.getElementById('narasi-4').getBoundingClientRect();
 var svgLocation5 = document.getElementById('narasi-5').getBoundingClientRect();
 var svgLocation6 = document.getElementById('narasi-6').getBoundingClientRect();
@@ -113,7 +113,7 @@ var svgLocationPovertyline= document.getElementById('narasi-povertyline').getBou
 
 var offsetToTriggerAnimation = svgLocation1.y + svgLocation1.height;
 var offsetToTriggerAnimation2 = svgLocation2.y + svgLocation2.height;
-var offsetToTriggerAnimation3 = svgLocation3.y + svgLocation3.height;
+// var offsetToTriggerAnimation3 = svgLocation3.y + svgLocation3.height;
 var offsetToTriggerAnimation4 = svgLocation4.y + svgLocation4.height;
 var offsetToTriggerAnimation5 = svgLocation5.y + svgLocation5.height;
 var offsetToTriggerAnimation6 = svgLocation6.y + svgLocation6.height;
@@ -200,7 +200,7 @@ function scrollAnimTriggerCheckPovertyline(evt) {
 document.addEventListener("scroll", scrollAnimTriggerCheck);
 document.addEventListener("scroll", scrollAnimTriggerCheck2);
 // document.addEventListener("scroll", scrollAnimTriggerCheck3);
-anim3 = lottie.loadAnimation(params3);
+// anim3 = lottie.loadAnimation(params3);
 //anim4 = lottie.loadAnimation(params4);
 document.addEventListener("scroll", scrollAnimTriggerCheck4);
 document.addEventListener("scroll", scrollAnimTriggerCheck5);
