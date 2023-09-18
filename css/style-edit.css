@@ -628,11 +628,12 @@ a:active {
     font-weight: bold;
     font-size: 1.2em;
     font-family: "Google Sans", "Noto Sans", sans-serif !important;
+    text-decoration: none !important;
 }
 
 .list-sumber {
     font-size: 0.9em;
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 
 .btn-sumber {
