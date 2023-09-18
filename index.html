@@ -11,13 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-edit.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         #chartdiv2 {
             width: 100%;
-            height: 600px;
+            height: 500px;
             margin: auto;
         }
     </style>
@@ -38,13 +40,14 @@
                         <div data-w-id="8f8e4dc1-3264-5252-5bc7-4abf04dd76d9"
                             style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
                             class="b_nav-bar">
-                            <p class="oleh oleh2">Seberapa jauh Indonesia telah berhasil dalam memberantas
-                                kemiskinan?
-                            </p>
+
 
                         </div>
                         <div class="cc-gradient-overlay"></div>
-                        <div class="c_main cc-hero">
+                        <div class="c_main cc-hero video-container">
+                            <video autoplay muted loop id="videoCover" class="centered">
+                                <source src="assets/videocover.mp4" type="video/mp4">
+                            </video>
                             <h1 data-reveal-text="true" data-reveal-wait="200" class="cc-white-text cc-center"
                                 style="opacity: 1;">
                                 <div style="position:relative;display:inline-block;" class="word-split--outer">
@@ -67,6 +70,10 @@
                                         style="position: relative; display: inline-block; opacity: 1; transform: translate(0px, 0px);">
                                         We?</div>
                                 </div>
+                                <p class="oleh oleh2">&nbsp;&nbsp;Seberapa jauh Indonesia telah berhasil dalam
+                                    memberantas
+                                    kemiskinan?&nbsp;&nbsp;
+                                </p>
                                 <p class="oleh">oleh Musafrizki Putri, Narezi Febriansa, dan Rengga Firmandika</p>
                                 <svg class="sticky" width="40px" height="100%" viewBox="0 0 247 390" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -117,6 +124,63 @@
                         </div>
                         <div class="container-button last-item">
                             <button id="button-mulai" class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Telusuri</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div style="z-index: 4; position: relative;">
+                <section class="s_intro wf-section" id="section-basicneed">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="flex-group" id="narasi-basicneed">
+                            <div class="col-lg-6 flex">
+                                <div>
+                                    <h2 class="narasi2" data-aos="zoom-out" data-aos-duration="1000">Kemiskinan
+                                        dipandang sebagai ketidakmampuan seseorang dari <span class="orange-text">sisi
+                                            ekonomi</span> untuk memenuhi <span class="orange-text">kebutuhan
+                                            dasarnya</span>.
+                                    </h2>
+                                    <h2 class="narasi2" id="narasi-basicneed-2">
+                                        Kemiskinan di SDGs dibedakan menjadi 2, yaitu: <span
+                                            class="orange-text">kemiskinan ekstrem</span> dan <span
+                                            class="orange-text">kemiskinan nasional</span>.
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 flex">
+                                <div id="animasi-basicneed"></div>
+                            </div>
+                        </div>
+                        <div class="container-button last-item">
+                            <button id="button-next-basicneed" class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Selanjutnya</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div style="z-index: 4; position: relative;">
+                <section class="s_intro wf-section" id="section-povertyline">
+                    <div class="c_main2 tampilan_grid">
+                        <div class="isi_flex" id="narasi-povertyline">
+                            <div id="animasi-povertyline">
+                            </div>
+                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Penduduk dikatakan miskin
+                                ekstrem apabila memiliki rata-rata pendapatan di bawah garis kemiskinan ekstrim yaitu
+                                $2,15 PPP/orang/hari atau Rp11.910/orang/hari (Rp357.300/orang/bulan).
+                            </h2>
+                            <h2 class="narasi" id="narasi-povertyline-2">Penduduk dikatakan miskin apabila memiliki rata-rata pengeluaran per bulan di bawah garis kemiskinan nasional, yaitu Rp550.458/orang/bulan (maret 2023).
+                            </h2>
+                        </div>
+                        <div class="container-button last-item">
+                            <button id="button-povertyline" class="learn-more">
                                 <span class="circle" aria-hidden="true">
                                     <span class="icon arrow"></span>
                                 </span>
@@ -204,11 +268,13 @@
                                 Jumlah penduduk miskin sebesar <span class="yellow-text">25,8 juta jiwa</span> ini
                                 hampir <span class="yellow-text">5 kali lipat jumlah penduduk Singapura</span>.
                             </h2>
-                            <h2 id="narasi-populasi-2" class="narasi" data-aos="zoom-in" data-aos-duration="1000"
-                                data-aos-delay="4000">Dan,
+                            <h2 id="narasi-populasi-2" class="narasi">Dan,
                                 <span class="yellow-text">lebih dari 50%</span> penduduk miskin ini berada di <span
                                     class="yellow-text">Pulau Jawa</span>.
                             </h2>
+                            <h3 id="narasi-populasi-3" class="subtext">
+                                (Klik tombol 'Eksplor Data' di bawah untuk melihat data secara lebih lengkap)
+                            </h3>
                         </div>
                         <div class="container-button last-item">
                             <button id="button-next-populasi" class="learn-more">
@@ -223,32 +289,41 @@
             </div>
             <div style="z-index: 5; position: relative;">
                 <section class="s_intro wf-section" id="section-datakemiskinan">
-                    
+
                     <div class="c_main2 tampilan_grid">
                         <div class="isi_flex">
-                            <h2 id="narasi-datakemiskinan-1" class="narasi" data-aos="zoom-in" data-aos-duration="1000">
+                            <h2 id="narasi-datakemiskinan-1" class="narasi">
                                 Persentase dan Jumlah Penduduk Miskin menurut Provinsi di Indonesia
+                            </h2>
+                            <h2 class="narasi"><mark class="highlight highlight-green" id="tahundata">Maret 2023</mark>
                             </h2>
                             <h3 class="subtext">
                                 (Arahkan kursor pada peta untuk melihat data masing-masing wilayah)
                             </h3>
                         </div>
-                        
-                        
+
+
                         <div id="chartdiv2" class="centered"></div>
+                        <div class="range-container">
+                            <div id="slider">
+                                <div id="sliderTahun" class="ui-slider-handle"></div>
+                            </div>
+                        </div>
                         <!-- <div class="isi_flex" id="narasi-datakemiskinan">
                             <h2 id="narasi-datakemiskinan-1" class="narasi" data-aos="zoom-in" data-aos-duration="1000">
                                 Jumlah penduduk miskin sebesar <span class="yellow-text">25,8 juta jiwa</span> ini
                                 setara dengan <span class="yellow-text">5 kali lipat jumlah penduduk Singapura</span>.
                             </h2>
                         </div> -->
-                        <div class="container-button last-item">
-                            <button id="button-next-datakemiskinan" class="learn-more">
-                                <span class="circle" aria-hidden="true">
-                                    <span class="icon arrow"></span>
-                                </span>
-                                <span class="button-text">Selanjutnya</span>
-                            </button>
+                        <div class="isi_flex">
+                            <div class="container-button last-item">
+                                <button id="button-next-datakemiskinan" class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">Selanjutnya</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -394,6 +469,9 @@
     <script src="https://cdn.amcharts.com/lib/5/geodata/indonesiaLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
@@ -407,113 +485,7 @@
 
     <script src="scripts/index.js"></script>
 
-    <script>
-        am5.ready(function () {
 
-            // Create root
-            var root = am5.Root.new("chartdiv2");
-
-            // Set themes
-            root.setThemes([
-                am5themes_Animated.new(root)
-            ]);
-
-            // Create chart
-            var chart = root.container.children.push(am5map.MapChart.new(root, {
-                panX: "rotateX",
-                panY: "none",
-                projection: am5map.geoNaturalEarth1(),
-                layout: root.horizontalLayout
-            }));
-
-            // Create polygon series
-            var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-                geoJSON: am5geodata_indonesiaLow,
-                valueField: "value",
-                calculateAggregates: true,
-                fill: am5.color(0xd1d2d3)
-            }));
-
-            polygonSeries.mapPolygons.template.setAll({
-                tooltipText: "[bold]{name}[/] \nPersentase: {value}% \nJumlah: {jumlah} ribu jiwa"
-            });
-
-            polygonSeries.set("heatRules", [{
-                target: polygonSeries.mapPolygons.template,
-                dataField: "value",
-                min: am5.color(0x04AA6D),
-                max: am5.color(0xf47d62),
-                key: "fill"
-            }]);
-
-            polygonSeries.mapPolygons.template.events.on("pointerover", function (ev) {
-                heatLegend.showValue(ev.target.dataItem.get("value"));
-            });
-
-            polygonSeries.data.setAll([
-                { id: "ID-AC", value: 14.45, jumlah: 806.75 },
-                { id: "ID-SU", value: 8.15, jumlah: 1239.71 },
-                { id: "ID-SB", value: 5.95, jumlah: 340.37 },
-                { id: "ID-RI", value: 6.68, jumlah: 485.66 },
-                { id: "ID-JA", value: 7.58, jumlah: 280.68 },
-                { id: "ID-SS", value: 11.78, jumlah: 1045.68 },
-                { id: "ID-BE", value: 14.04, jumlah: 288.46 },
-                { id: "ID-LA", value: 11.11, jumlah: 970.67 },
-                { id: "ID-BB", value: 4.52, jumlah: 68.69 },
-                { id: "ID-KR", value: 5.69, jumlah: 142.50 },
-                { id: "ID-JK", value: 4.44, jumlah: 477.83 },
-                { id: "ID-JB", value: 7.62, jumlah: 3888.60 },
-                { id: "ID-JT", value: 10.77, jumlah: 3791.50 },
-                { id: "ID-YO", value: 11.04, jumlah: 448.47 },
-                { id: "ID-JI", value: 10.35, jumlah: 4188.81 },
-                { id: "ID-BT", value: 6.17, jumlah: 826.13 },
-                { id: "ID-BA", value: 4.25, jumlah: 193.78 },
-                { id: "ID-NB", value: 13.85, jumlah: 751.23 },
-                { id: "ID-NT", value: 19.96, jumlah: 1141.11 },
-                { id: "ID-KB", value: 6.71, jumlah: 353.35 },
-                { id: "ID-KT", value: 5.11, jumlah: 142.17 },
-                { id: "ID-KS", value: 4.29, jumlah: 188.93 },
-                { id: "ID-KI", value: 6.11, jumlah: 231.07 },
-                { id: "ID-KU", value: 6.45, jumlah: 47.97 },
-                { id: "ID-SA", value: 7.38, jumlah: 189.00},
-                { id: "ID-ST", value: 12.41, jumlah: 395.66 },
-                { id: "ID-SN", value: 8.70, jumlah: 788.85 },
-                { id: "ID-SG", value: 11.43, jumlah: 321.53 },
-                { id: "ID-GO", value: 15.15, jumlah: 183.71 },
-                { id: "ID-SR", value: 11.49, jumlah: 164.14 },
-                { id: "ID-MA", value: 16.42, jumlah: 301.61 },
-                { id: "ID-MU", value: 6.46, jumlah: 83.80 },
-                { id: "ID-PB", value: 20.49, jumlah: 214.98 },
-                { id: "ID-PA", value: 26.03, jumlah: 915.15 }
-            ]);
-
-            var heatLegend = chart.children.push(am5.HeatLegend.new(root, {
-                orientation: "vertical",
-                startColor: am5.color(0x04AA6D),
-                endColor: am5.color(0xf47d62),
-                startText: "Lowest",
-                endText: "Highest",
-                stepCount: 5
-            }));
-
-            heatLegend.startLabel.setAll({
-                fontSize: 12,
-                fill: heatLegend.get("startColor")
-            });
-
-            heatLegend.endLabel.setAll({
-                fontSize: 12,
-                fill: heatLegend.get("endColor")
-            });
-
-            // change this to template when possible
-            polygonSeries.events.on("datavalidated", function () {
-                heatLegend.set("startValue", polygonSeries.getPrivate("valueLow"));
-                heatLegend.set("endValue", polygonSeries.getPrivate("valueHigh"));
-            });
-
-        }); // end am5.ready()
-    </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script> -->
@@ -529,6 +501,9 @@
             $("#animasi-orang").css('opacity', 0);
             $("#narasi-regsosek-2").css('opacity', 0);
             $("#narasi-populasi-2").css('opacity', 0);
+            $("#narasi-populasi-3").css('opacity', 0);
+            $("#narasi-basicneed-2").css('opacity', 0);
+            $("#narasi-povertyline-2").css('opacity', 0);
             $(".hideme").css('opacity', 0);
             $("#section-program").hide();
             $("#section-panah").hide();
@@ -536,6 +511,8 @@
             $("#section-closing").hide();
             $("#section-populasi").hide();
             $("#section-datakemiskinan").hide();
+            $("#section-basicneed").hide();
+            $("#section-povertyline").hide();
 
             $(window).scroll(function () {
                 $('.hideme').each(function (i) {
@@ -549,6 +526,832 @@
                     }
                 });
             });
+
+            am5.ready(function () {
+
+                // Create root
+                var root = am5.Root.new("chartdiv2");
+
+                // Set themes
+                root.setThemes([
+                    am5themes_Animated.new(root)
+                ]);
+
+                // Create chart
+                var chart = root.container.children.push(am5map.MapChart.new(root, {
+                    panX: "rotateX",
+                    panY: "none",
+                    projection: am5map.geoNaturalEarth1(),
+                    layout: root.horizontalLayout
+                }));
+
+                // Create polygon series
+                var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_indonesiaLow,
+                    valueField: "log",
+                    calculateAggregates: true,
+                    fill: am5.color(0xd1d2d3)
+                }));
+
+                polygonSeries.mapPolygons.template.setAll({
+                    tooltipText: "[bold]{name}[/] \nPersentase: {persentase}% \nJumlah: {jumlah} ribu jiwa"
+                });
+
+                polygonSeries.set("heatRules", [{
+                    target: polygonSeries.mapPolygons.template,
+                    dataField: "value",
+                    min: am5.color(0x04AA6D),
+                    max: am5.color(0xf47d62),
+                    key: "fill"
+                }]);
+
+                // polygonSeries.mapPolygons.template.events.on("pointerover", function (ev) {
+                //   heatLegend.showValue(ev.target.dataItem.get("value"));
+                // });
+
+                var sliderText = ["Mar 2015", "Sep 2015", "Mar 2016", "Sep 2016", "Mar 2017", "Sep 2017", "Mar 2018", "Sep 2018", "Mar 2019", "Sep 2019", "Mar 2020", "Sep 2020", "Mar 2021", "Sep 2021", "Mar 2022", "Sep 2022", "Mar 2023"];
+
+                var handle = $("#sliderTahun");
+                $("#slider").slider({
+                    min: 1,
+                    max: 17,
+                    value: 17,
+                    step: 1,
+                    create: function () {
+                        console.log();
+                        handle.text(sliderText[$(this).slider("value") - 1]);
+                        tahun = $(this).slider("value");
+                        polygonSeries.data.setAll([
+                            { id: "ID-AC", persentase: 14.45, jumlah: 806.75, log: 2.67 },
+                            { id: "ID-SU", persentase: 8.15, jumlah: 1239.71, log: 2.10 },
+                            { id: "ID-SB", persentase: 5.95, jumlah: 340.37, log: 1.78 },
+                            { id: "ID-RI", persentase: 6.68, jumlah: 485.66, log: 1.90 },
+                            { id: "ID-JA", persentase: 7.58, jumlah: 280.68, log: 2.03 },
+                            { id: "ID-SS", persentase: 11.78, jumlah: 1045.68, log: 2.47 },
+                            { id: "ID-BE", persentase: 14.04, jumlah: 288.46, log: 2.64 },
+                            { id: "ID-LA", persentase: 11.11, jumlah: 970.67, log: 2.41 },
+                            { id: "ID-BB", persentase: 4.52, jumlah: 68.69, log: 1.51 },
+                            { id: "ID-KR", persentase: 5.69, jumlah: 142.5, log: 1.74 },
+                            { id: "ID-JK", persentase: 4.44, jumlah: 477.83, log: 1.49 },
+                            { id: "ID-JB", persentase: 7.62, jumlah: 3888.6, log: 2.03 },
+                            { id: "ID-JT", persentase: 10.77, jumlah: 3791.5, log: 2.38 },
+                            { id: "ID-YO", persentase: 11.04, jumlah: 448.47, log: 2.40 },
+                            { id: "ID-JI", persentase: 10.35, jumlah: 4188.81, log: 2.34 },
+                            { id: "ID-BT", persentase: 6.17, jumlah: 826.13, log: 1.82 },
+                            { id: "ID-BA", persentase: 4.25, jumlah: 193.78, log: 1.45 },
+                            { id: "ID-NB", persentase: 13.85, jumlah: 751.23, log: 2.63 },
+                            { id: "ID-NT", persentase: 19.96, jumlah: 1141.11, log: 2.99 },
+                            { id: "ID-KB", persentase: 6.71, jumlah: 353.35, log: 1.90 },
+                            { id: "ID-KT", persentase: 5.11, jumlah: 142.17, log: 1.63 },
+                            { id: "ID-KS", persentase: 4.29, jumlah: 188.93, log: 1.46 },
+                            { id: "ID-KI", persentase: 6.11, jumlah: 231.07, log: 1.81 },
+                            { id: "ID-KU", persentase: 6.45, jumlah: 47.97, log: 1.86 },
+                            { id: "ID-SA", persentase: 7.38, jumlah: 189, log: 2.00 },
+                            { id: "ID-ST", persentase: 12.41, jumlah: 395.66, log: 2.52 },
+                            { id: "ID-SN", persentase: 8.7, jumlah: 788.85, log: 2.16 },
+                            { id: "ID-SG", persentase: 11.43, jumlah: 321.53, log: 2.44 },
+                            { id: "ID-GO", persentase: 15.15, jumlah: 183.71, log: 2.72 },
+                            { id: "ID-SR", persentase: 11.49, jumlah: 164.14, log: 2.44 },
+                            { id: "ID-MA", persentase: 16.42, jumlah: 301.61, log: 2.80 },
+                            { id: "ID-MU", persentase: 6.46, jumlah: 83.8, log: 1.87 },
+                            { id: "ID-PB", persentase: 20.49, jumlah: 214.98, log: 3.02 },
+                            { id: "ID-PA", persentase: 26.03, jumlah: 915.15, log: 3.26 },
+                            { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                            { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                        ]);
+                        polygonSeries.appear(1000, 300);
+                    },
+                    slide: function (event, ui) {
+                        handle.text(sliderText[ui.value - 1]);
+                        if (ui.value == 1) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 17.08, jumlah: 851.59, log: 2.838 },
+                                { id: "ID-SU", persentase: 10.53, jumlah: 1463.67, log: 2.354 },
+                                { id: "ID-SB", persentase: 7.31, jumlah: 379.61, log: 1.989 },
+                                { id: "ID-RI", persentase: 8.42, jumlah: 531.39, log: 2.131 },
+                                { id: "ID-JA", persentase: 8.86, jumlah: 300.71, log: 2.182 },
+                                { id: "ID-SS", persentase: 14.25, jumlah: 1145.63, log: 2.657 },
+                                { id: "ID-BE", persentase: 17.88, jumlah: 334.07, log: 2.884 },
+                                { id: "ID-LA", persentase: 14.35, jumlah: 1163.49, log: 2.664 },
+                                { id: "ID-BB", persentase: 5.4, jumlah: 74.09, log: 1.686 },
+                                { id: "ID-KR", persentase: 6.24, jumlah: 122.4, log: 1.831 },
+                                { id: "ID-JK", persentase: 3.93, jumlah: 398.92, log: 1.369 },
+                                { id: "ID-JB", persentase: 9.53, jumlah: 4435.7, log: 2.254 },
+                                { id: "ID-JT", persentase: 13.58, jumlah: 4577.04, log: 2.609 },
+                                { id: "ID-YO", persentase: 14.91, jumlah: 550.23, log: 2.702 },
+                                { id: "ID-JI", persentase: 12.34, jumlah: 4789.12, log: 2.513 },
+                                { id: "ID-BT", persentase: 5.9, jumlah: 702.4, log: 1.775 },
+                                { id: "ID-BA", persentase: 4.74, jumlah: 196.71, log: 1.556 },
+                                { id: "ID-NB", persentase: 17.1, jumlah: 823.89, log: 2.839 },
+                                { id: "ID-NT", persentase: 22.61, jumlah: 1159.84, log: 3.118 },
+                                { id: "ID-KB", persentase: 8.03, jumlah: 383.7, log: 2.083 },
+                                { id: "ID-KT", persentase: 5.94, jumlah: 147.7, log: 1.782 },
+                                { id: "ID-KS", persentase: 4.99, jumlah: 198.44, log: 1.607 },
+                                { id: "ID-KI", persentase: 6.23, jumlah: 212.89, log: 1.829 },
+                                { id: "ID-KU", persentase: 6.24, jumlah: 39.69, log: 1.831 },
+                                { id: "ID-SA", persentase: 8.65, jumlah: 208.54, log: 2.158 },
+                                { id: "ID-ST", persentase: 14.66, jumlah: 421.62, log: 2.685 },
+                                { id: "ID-SN", persentase: 9.39, jumlah: 797.72, log: 2.240 },
+                                { id: "ID-SG", persentase: 12.9, jumlah: 321.88, log: 2.557 },
+                                { id: "ID-GO", persentase: 18.32, jumlah: 206.84, log: 2.908 },
+                                { id: "ID-SR", persentase: 12.4, jumlah: 160.48, log: 2.518 },
+                                { id: "ID-MA", persentase: 19.51, jumlah: 328.41, log: 2.971 },
+                                { id: "ID-MU", persentase: 6.84, jumlah: 79.9, log: 1.923 },
+                                { id: "ID-PB", persentase: 25.82, jumlah: 225.36, log: 3.251 },
+                                { id: "ID-PA", persentase: 28.17, jumlah: 859.15, log: 3.338 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2015");
+                        }
+                        else if (ui.value == 2) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 17.11, jumlah: 859.41, log: 2.840 },
+                                { id: "ID-SU", persentase: 10.79, jumlah: 1508.14, log: 2.379 },
+                                { id: "ID-SB", persentase: 6.71, jumlah: 349.53, log: 1.904 },
+                                { id: "ID-RI", persentase: 8.82, jumlah: 562.92, log: 2.177 },
+                                { id: "ID-JA", persentase: 9.12, jumlah: 311.56, log: 2.210 },
+                                { id: "ID-SS", persentase: 13.77, jumlah: 1112.53, log: 2.622 },
+                                { id: "ID-BE", persentase: 17.16, jumlah: 322.83, log: 2.843 },
+                                { id: "ID-LA", persentase: 13.53, jumlah: 1100.68, log: 2.605 },
+                                { id: "ID-BB", persentase: 4.83, jumlah: 66.62, log: 1.575 },
+                                { id: "ID-KR", persentase: 5.78, jumlah: 114.83, log: 1.754 },
+                                { id: "ID-JK", persentase: 3.61, jumlah: 368.67, log: 1.284 },
+                                { id: "ID-JB", persentase: 9.57, jumlah: 4485.65, log: 2.259 },
+                                { id: "ID-JT", persentase: 13.32, jumlah: 4505.78, log: 2.589 },
+                                { id: "ID-YO", persentase: 13.16, jumlah: 485.56, log: 2.577 },
+                                { id: "ID-JI", persentase: 12.28, jumlah: 4775.97, log: 2.508 },
+                                { id: "ID-BT", persentase: 5.75, jumlah: 690.67, log: 1.749 },
+                                { id: "ID-BA", persentase: 5.25, jumlah: 218.79, log: 1.658 },
+                                { id: "ID-NB", persentase: 16.54, jumlah: 802.29, log: 2.806 },
+                                { id: "ID-NT", persentase: 22.58, jumlah: 1160.53, log: 3.117 },
+                                { id: "ID-KB", persentase: 8.44, jumlah: 405.51, log: 2.133 },
+                                { id: "ID-KT", persentase: 5.91, jumlah: 148.13, log: 1.777 },
+                                { id: "ID-KS", persentase: 4.72, jumlah: 189.16, log: 1.552 },
+                                { id: "ID-KI", persentase: 6.1, jumlah: 209.99, log: 1.808 },
+                                { id: "ID-KU", persentase: 6.32, jumlah: 40.93, log: 1.844 },
+                                { id: "ID-SA", persentase: 8.98, jumlah: 217.15, log: 2.195 },
+                                { id: "ID-ST", persentase: 14.07, jumlah: 406.34, log: 2.644 },
+                                { id: "ID-SN", persentase: 10.12, jumlah: 864.51, log: 2.315 },
+                                { id: "ID-SG", persentase: 13.74, jumlah: 345.02, log: 2.620 },
+                                { id: "ID-GO", persentase: 18.16, jumlah: 206.51, log: 2.899 },
+                                { id: "ID-SR", persentase: 11.9, jumlah: 153.21, log: 2.477 },
+                                { id: "ID-MA", persentase: 19.36, jumlah: 327.78, log: 2.963 },
+                                { id: "ID-MU", persentase: 6.22, jumlah: 72.65, log: 1.828 },
+                                { id: "ID-PB", persentase: 25.73, jumlah: 225.54, log: 3.248 },
+                                { id: "ID-PA", persentase: 28.4, jumlah: 898.21, log: 3.346 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2015");
+                        }
+                        else if (ui.value == 3) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 16.73, jumlah: 848.44, log: 2.817 },
+                                { id: "ID-SU", persentase: 10.35, jumlah: 1455.95, log: 2.337 },
+                                { id: "ID-SB", persentase: 7.09, jumlah: 371.56, log: 1.959 },
+                                { id: "ID-RI", persentase: 7.98, jumlah: 515.4, log: 2.077 },
+                                { id: "ID-JA", persentase: 8.41, jumlah: 289.8, log: 2.129 },
+                                { id: "ID-SS", persentase: 13.54, jumlah: 1101.19, log: 2.606 },
+                                { id: "ID-BE", persentase: 17.32, jumlah: 328.61, log: 2.852 },
+                                { id: "ID-LA", persentase: 14.29, jumlah: 1169.6, log: 2.660 },
+                                { id: "ID-BB", persentase: 5.22, jumlah: 72.76, log: 1.652 },
+                                { id: "ID-KR", persentase: 5.98, jumlah: 120.41, log: 1.788 },
+                                { id: "ID-JK", persentase: 3.75, jumlah: 384.3, log: 1.322 },
+                                { id: "ID-JB", persentase: 8.95, jumlah: 4224.33, log: 2.192 },
+                                { id: "ID-JT", persentase: 13.27, jumlah: 4506.89, log: 2.586 },
+                                { id: "ID-YO", persentase: 13.34, jumlah: 494.94, log: 2.591 },
+                                { id: "ID-JI", persentase: 12.05, jumlah: 4703.3, log: 2.489 },
+                                { id: "ID-BT", persentase: 5.42, jumlah: 658.11, log: 1.690 },
+                                { id: "ID-BA", persentase: 4.25, jumlah: 178.18, log: 1.447 },
+                                { id: "ID-NB", persentase: 16.48, jumlah: 804.44, log: 2.802 },
+                                { id: "ID-NT", persentase: 22.19, jumlah: 1149.92, log: 3.100 },
+                                { id: "ID-KB", persentase: 7.87, jumlah: 381.35, log: 2.063 },
+                                { id: "ID-KT", persentase: 5.66, jumlah: 143.49, log: 1.733 },
+                                { id: "ID-KS", persentase: 4.85, jumlah: 195.7, log: 1.579 },
+                                { id: "ID-KI", persentase: 6.11, jumlah: 212.92, log: 1.810 },
+                                { id: "ID-KU", persentase: 6.23, jumlah: 41.12, log: 1.829 },
+                                { id: "ID-SA", persentase: 8.34, jumlah: 202.82, log: 2.121 },
+                                { id: "ID-ST", persentase: 14.45, jumlah: 420.52, log: 2.671 },
+                                { id: "ID-SN", persentase: 9.4, jumlah: 807.03, log: 2.241 },
+                                { id: "ID-SG", persentase: 12.88, jumlah: 326.86, log: 2.556 },
+                                { id: "ID-GO", persentase: 17.72, jumlah: 203.19, log: 2.875 },
+                                { id: "ID-SR", persentase: 11.74, jumlah: 152.73, log: 2.463 },
+                                { id: "ID-MA", persentase: 19.18, jumlah: 327.72, log: 2.954 },
+                                { id: "ID-MU", persentase: 6.33, jumlah: 74.68, log: 1.845 },
+                                { id: "ID-PB", persentase: 25.43, jumlah: 225.8, log: 3.236 },
+                                { id: "ID-PA", persentase: 28.54, jumlah: 911.33, log: 3.351 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2016");
+                        }
+                        else if (ui.value == 4) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 16.43, jumlah: 841.31, log: 2.799 },
+                                { id: "ID-SU", persentase: 10.27, jumlah: 1452.55, log: 2.329 },
+                                { id: "ID-SB", persentase: 7.14, jumlah: 376.51, log: 1.966 },
+                                { id: "ID-RI", persentase: 7.67, jumlah: 501.59, log: 2.037 },
+                                { id: "ID-JA", persentase: 8.37, jumlah: 290.81, log: 2.125 },
+                                { id: "ID-SS", persentase: 13.39, jumlah: 1096.5, log: 2.595 },
+                                { id: "ID-BE", persentase: 17.03, jumlah: 325.6, log: 2.835 },
+                                { id: "ID-LA", persentase: 13.86, jumlah: 1139.78, log: 2.629 },
+                                { id: "ID-BB", persentase: 5.04, jumlah: 71.07, log: 1.617 },
+                                { id: "ID-KR", persentase: 5.84, jumlah: 119.14, log: 1.765 },
+                                { id: "ID-JK", persentase: 3.75, jumlah: 385.84, log: 1.322 },
+                                { id: "ID-JB", persentase: 8.77, jumlah: 4168.11, log: 2.171 },
+                                { id: "ID-JT", persentase: 13.19, jumlah: 4493.75, log: 2.579 },
+                                { id: "ID-YO", persentase: 13.1, jumlah: 488.83, log: 2.573 },
+                                { id: "ID-JI", persentase: 11.85, jumlah: 4638.53, log: 2.472 },
+                                { id: "ID-BT", persentase: 5.36, jumlah: 657.74, log: 1.679 },
+                                { id: "ID-BA", persentase: 4.15, jumlah: 174.94, log: 1.423 },
+                                { id: "ID-NB", persentase: 16.02, jumlah: 786.58, log: 2.774 },
+                                { id: "ID-NT", persentase: 22.01, jumlah: 1150.08, log: 3.091 },
+                                { id: "ID-KB", persentase: 8, jumlah: 390.32, log: 2.079 },
+                                { id: "ID-KT", persentase: 5.36, jumlah: 137.46, log: 1.679 },
+                                { id: "ID-KS", persentase: 4.52, jumlah: 184.16, log: 1.509 },
+                                { id: "ID-KI", persentase: 6, jumlah: 211.24, log: 1.792 },
+                                { id: "ID-KU", persentase: 6.99, jumlah: 47.03, log: 1.944 },
+                                { id: "ID-SA", persentase: 8.2, jumlah: 200.35, log: 2.104 },
+                                { id: "ID-ST", persentase: 14.09, jumlah: 413.15, log: 2.645 },
+                                { id: "ID-SN", persentase: 9.24, jumlah: 796.81, log: 2.224 },
+                                { id: "ID-SG", persentase: 12.77, jumlah: 327.29, log: 2.547 },
+                                { id: "ID-GO", persentase: 17.63, jumlah: 203.69, log: 2.870 },
+                                { id: "ID-SR", persentase: 11.19, jumlah: 146.9, log: 2.415 },
+                                { id: "ID-MA", persentase: 19.26, jumlah: 331.79, log: 2.958 },
+                                { id: "ID-MU", persentase: 6.41, jumlah: 76.4, log: 1.858 },
+                                { id: "ID-PB", persentase: 24.88, jumlah: 223.6, log: 3.214 },
+                                { id: "ID-PA", persentase: 28.4, jumlah: 914.87, log: 3.346 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2016");
+                        }
+                        else if (ui.value == 5) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 16.89, jumlah: 872.61, log: 2.827 },
+                                { id: "ID-SU", persentase: 10.22, jumlah: 1453.87, log: 2.324 },
+                                { id: "ID-SB", persentase: 6.87, jumlah: 364.51, log: 1.927 },
+                                { id: "ID-RI", persentase: 7.78, jumlah: 514.62, log: 2.052 },
+                                { id: "ID-JA", persentase: 8.19, jumlah: 286.55, log: 2.103 },
+                                { id: "ID-SS", persentase: 13.19, jumlah: 1086.92, log: 2.579 },
+                                { id: "ID-BE", persentase: 16.45, jumlah: 316.98, log: 2.800 },
+                                { id: "ID-LA", persentase: 13.69, jumlah: 1131.73, log: 2.617 },
+                                { id: "ID-BB", persentase: 5.2, jumlah: 74.09, log: 1.649 },
+                                { id: "ID-KR", persentase: 6.06, jumlah: 125.37, log: 1.802 },
+                                { id: "ID-JK", persentase: 3.77, jumlah: 389.69, log: 1.327 },
+                                { id: "ID-JB", persentase: 8.71, jumlah: 4168.44, log: 2.164 },
+                                { id: "ID-JT", persentase: 13.01, jumlah: 4450.72, log: 2.566 },
+                                { id: "ID-YO", persentase: 13.02, jumlah: 488.53, log: 2.566 },
+                                { id: "ID-JI", persentase: 11.77, jumlah: 4617.01, log: 2.466 },
+                                { id: "ID-BT", persentase: 5.45, jumlah: 675.04, log: 1.696 },
+                                { id: "ID-BA", persentase: 4.25, jumlah: 180.13, log: 1.447 },
+                                { id: "ID-NB", persentase: 16.07, jumlah: 793.78, log: 2.777 },
+                                { id: "ID-NT", persentase: 21.85, jumlah: 1150.79, log: 3.084 },
+                                { id: "ID-KB", persentase: 7.88, jumlah: 387.43, log: 2.064 },
+                                { id: "ID-KT", persentase: 5.37, jumlah: 139.16, log: 1.681 },
+                                { id: "ID-KS", persentase: 4.73, jumlah: 193.92, log: 1.554 },
+                                { id: "ID-KI", persentase: 6.19, jumlah: 220.17, log: 1.823 },
+                                { id: "ID-KU", persentase: 7.22, jumlah: 49.47, log: 1.977 },
+                                { id: "ID-SA", persentase: 8.1, jumlah: 198.88, log: 2.092 },
+                                { id: "ID-ST", persentase: 14.14, jumlah: 417.87, log: 2.649 },
+                                { id: "ID-SN", persentase: 9.38, jumlah: 813.07, log: 2.239 },
+                                { id: "ID-SG", persentase: 12.81, jumlah: 331.71, log: 2.550 },
+                                { id: "ID-GO", persentase: 17.65, jumlah: 205.37, log: 2.871 },
+                                { id: "ID-SR", persentase: 11.3, jumlah: 149.76, log: 2.425 },
+                                { id: "ID-MA", persentase: 18.45, jumlah: 320.51, log: 2.915 },
+                                { id: "ID-MU", persentase: 6.35, jumlah: 76.47, log: 1.848 },
+                                { id: "ID-PB", persentase: 25.1, jumlah: 228.38, log: 3.223 },
+                                { id: "ID-PA", persentase: 27.62, jumlah: 897.69, log: 3.319 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2017");
+                        }
+                        else if (ui.value == 6) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.92, jumlah: 829.8, log: 2.768 },
+                                { id: "ID-SU", persentase: 9.28, jumlah: 1326.57, log: 2.228 },
+                                { id: "ID-SB", persentase: 6.75, jumlah: 359.99, log: 1.910 },
+                                { id: "ID-RI", persentase: 7.41, jumlah: 496.39, log: 2.003 },
+                                { id: "ID-JA", persentase: 7.9, jumlah: 278.61, log: 2.067 },
+                                { id: "ID-SS", persentase: 13.1, jumlah: 1086.76, log: 2.573 },
+                                { id: "ID-BE", persentase: 15.59, jumlah: 302.62, log: 2.747 },
+                                { id: "ID-LA", persentase: 13.04, jumlah: 1083.74, log: 2.568 },
+                                { id: "ID-BB", persentase: 5.3, jumlah: 76.2, log: 1.668 },
+                                { id: "ID-KR", persentase: 6.13, jumlah: 128.43, log: 1.813 },
+                                { id: "ID-JK", persentase: 3.78, jumlah: 393.13, log: 1.330 },
+                                { id: "ID-JB", persentase: 7.83, jumlah: 3774.41, log: 2.058 },
+                                { id: "ID-JT", persentase: 12.23, jumlah: 4197.49, log: 2.504 },
+                                { id: "ID-YO", persentase: 12.36, jumlah: 466.33, log: 2.514 },
+                                { id: "ID-JI", persentase: 11.2, jumlah: 4405.27, log: 2.416 },
+                                { id: "ID-BT", persentase: 5.59, jumlah: 699.83, log: 1.721 },
+                                { id: "ID-BA", persentase: 4.14, jumlah: 176.48, log: 1.421 },
+                                { id: "ID-NB", persentase: 15.05, jumlah: 748.12, log: 2.711 },
+                                { id: "ID-NT", persentase: 21.38, jumlah: 1134.74, log: 3.062 },
+                                { id: "ID-KB", persentase: 7.86, jumlah: 388.81, log: 2.062 },
+                                { id: "ID-KT", persentase: 5.26, jumlah: 137.88, log: 1.660 },
+                                { id: "ID-KS", persentase: 4.7, jumlah: 194.56, log: 1.548 },
+                                { id: "ID-KI", persentase: 6.08, jumlah: 218.67, log: 1.805 },
+                                { id: "ID-KU", persentase: 6.96, jumlah: 48.56, log: 1.940 },
+                                { id: "ID-SA", persentase: 7.9, jumlah: 194.85, log: 2.067 },
+                                { id: "ID-ST", persentase: 14.22, jumlah: 423.27, log: 2.655 },
+                                { id: "ID-SN", persentase: 9.48, jumlah: 825.97, log: 2.249 },
+                                { id: "ID-SG", persentase: 11.97, jumlah: 313.16, log: 2.482 },
+                                { id: "ID-GO", persentase: 17.14, jumlah: 200.91, log: 2.841 },
+                                { id: "ID-SR", persentase: 11.18, jumlah: 149.47, log: 2.414 },
+                                { id: "ID-MA", persentase: 18.29, jumlah: 320.42, log: 2.906 },
+                                { id: "ID-MU", persentase: 6.44, jumlah: 78.28, log: 1.863 },
+                                { id: "ID-PB", persentase: 23.12, jumlah: 212.86, log: 3.141 },
+                                { id: "ID-PA", persentase: 27.76, jumlah: 910.42, log: 3.324 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2017");
+                        }
+                        else if (ui.value == 7) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.97, jumlah: 839.49, log: 2.771 },
+                                { id: "ID-SU", persentase: 9.22, jumlah: 1324.98, log: 2.221 },
+                                { id: "ID-SB", persentase: 6.65, jumlah: 357.13, log: 1.895 },
+                                { id: "ID-RI", persentase: 7.39, jumlah: 500.44, log: 2.000 },
+                                { id: "ID-JA", persentase: 7.92, jumlah: 281.69, log: 2.069 },
+                                { id: "ID-SS", persentase: 12.8, jumlah: 1068.27, log: 2.549 },
+                                { id: "ID-BE", persentase: 15.43, jumlah: 301.81, log: 2.736 },
+                                { id: "ID-LA", persentase: 13.14, jumlah: 1097.05, log: 2.576 },
+                                { id: "ID-BB", persentase: 5.25, jumlah: 76.26, log: 1.658 },
+                                { id: "ID-KR", persentase: 6.2, jumlah: 131.68, log: 1.825 },
+                                { id: "ID-JK", persentase: 3.57, jumlah: 373.12, log: 1.273 },
+                                { id: "ID-JB", persentase: 7.45, jumlah: 3615.79, log: 2.008 },
+                                { id: "ID-JT", persentase: 11.32, jumlah: 3897.2, log: 2.427 },
+                                { id: "ID-YO", persentase: 12.13, jumlah: 460.1, log: 2.496 },
+                                { id: "ID-JI", persentase: 10.98, jumlah: 4332.59, log: 2.396 },
+                                { id: "ID-BT", persentase: 5.24, jumlah: 661.36, log: 1.656 },
+                                { id: "ID-BA", persentase: 4.01, jumlah: 171.76, log: 1.389 },
+                                { id: "ID-NB", persentase: 14.75, jumlah: 737.46, log: 2.691 },
+                                { id: "ID-NT", persentase: 21.35, jumlah: 1142.17, log: 3.061 },
+                                { id: "ID-KB", persentase: 7.77, jumlah: 387.08, log: 2.050 },
+                                { id: "ID-KT", persentase: 5.17, jumlah: 136.93, log: 1.643 },
+                                { id: "ID-KS", persentase: 4.54, jumlah: 189.03, log: 1.513 },
+                                { id: "ID-KI", persentase: 6.03, jumlah: 218.9, log: 1.797 },
+                                { id: "ID-KU", persentase: 7.09, jumlah: 50.35, log: 1.959 },
+                                { id: "ID-SA", persentase: 7.8, jumlah: 193.31, log: 2.054 },
+                                { id: "ID-ST", persentase: 14.01, jumlah: 420.21, log: 2.640 },
+                                { id: "ID-SN", persentase: 9.06, jumlah: 792.63, log: 2.204 },
+                                { id: "ID-SG", persentase: 11.63, jumlah: 307.1, log: 2.454 },
+                                { id: "ID-GO", persentase: 16.81, jumlah: 198.51, log: 2.822 },
+                                { id: "ID-SR", persentase: 11.25, jumlah: 151.78, log: 2.420 },
+                                { id: "ID-MA", persentase: 18.12, jumlah: 320.08, log: 2.897 },
+                                { id: "ID-MU", persentase: 6.64, jumlah: 81.46, log: 1.893 },
+                                { id: "ID-PB", persentase: 23.01, jumlah: 214.47, log: 3.136 },
+                                { id: "ID-PA", persentase: 27.74, jumlah: 917.63, log: 3.323 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2018");
+                        }
+                        else if (ui.value == 8) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.68, jumlah: 831.5, log: 2.752 },
+                                { id: "ID-SU", persentase: 8.94, jumlah: 1291.99, log: 2.191 },
+                                { id: "ID-SB", persentase: 6.55, jumlah: 353.24, log: 1.879 },
+                                { id: "ID-RI", persentase: 7.21, jumlah: 494.26, log: 1.975 },
+                                { id: "ID-JA", persentase: 7.85, jumlah: 281.47, log: 2.061 },
+                                { id: "ID-SS", persentase: 12.82, jumlah: 1076.4, log: 2.551 },
+                                { id: "ID-BE", persentase: 15.41, jumlah: 303.55, log: 2.735 },
+                                { id: "ID-LA", persentase: 13.01, jumlah: 1091.6, log: 2.566 },
+                                { id: "ID-BB", persentase: 4.77, jumlah: 69.93, log: 1.562 },
+                                { id: "ID-KR", persentase: 5.83, jumlah: 125.36, log: 1.763 },
+                                { id: "ID-JK", persentase: 3.55, jumlah: 372.26, log: 1.267 },
+                                { id: "ID-JB", persentase: 7.25, jumlah: 3539.4, log: 1.981 },
+                                { id: "ID-JT", persentase: 11.19, jumlah: 3867.42, log: 2.415 },
+                                { id: "ID-YO", persentase: 11.81, jumlah: 450.25, log: 2.469 },
+                                { id: "ID-JI", persentase: 10.85, jumlah: 4292.15, log: 2.384 },
+                                { id: "ID-BT", persentase: 5.25, jumlah: 668.74, log: 1.658 },
+                                { id: "ID-BA", persentase: 3.91, jumlah: 168.34, log: 1.364 },
+                                { id: "ID-NB", persentase: 14.63, jumlah: 735.62, log: 2.683 },
+                                { id: "ID-NT", persentase: 21.03, jumlah: 1134.11, log: 3.046 },
+                                { id: "ID-KB", persentase: 7.37, jumlah: 369.73, log: 1.997 },
+                                { id: "ID-KT", persentase: 5.1, jumlah: 136.45, log: 1.629 },
+                                { id: "ID-KS", persentase: 4.65, jumlah: 195.01, log: 1.537 },
+                                { id: "ID-KI", persentase: 6.06, jumlah: 222.39, log: 1.802 },
+                                { id: "ID-KU", persentase: 6.86, jumlah: 49.59, log: 1.926 },
+                                { id: "ID-SA", persentase: 7.59, jumlah: 189.05, log: 2.027 },
+                                { id: "ID-ST", persentase: 13.69, jumlah: 413.49, log: 2.617 },
+                                { id: "ID-SN", persentase: 8.87, jumlah: 779.64, log: 2.183 },
+                                { id: "ID-SG", persentase: 11.32, jumlah: 301.85, log: 2.427 },
+                                { id: "ID-GO", persentase: 15.83, jumlah: 188.3, log: 2.762 },
+                                { id: "ID-SR", persentase: 11.22, jumlah: 152.83, log: 2.418 },
+                                { id: "ID-MA", persentase: 17.85, jumlah: 317.84, log: 2.882 },
+                                { id: "ID-MU", persentase: 6.62, jumlah: 81.93, log: 1.890 },
+                                { id: "ID-PB", persentase: 22.66, jumlah: 213.67, log: 3.121 },
+                                { id: "ID-PA", persentase: 27.43, jumlah: 915.22, log: 3.312 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2018");
+                        }
+                        else if (ui.value == 9) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.32, jumlah: 819.44, log: 2.729 },
+                                { id: "ID-SU", persentase: 8.83, jumlah: 1282.04, log: 2.178 },
+                                { id: "ID-SB", persentase: 6.42, jumlah: 348.22, log: 1.859 },
+                                { id: "ID-RI", persentase: 7.08, jumlah: 490.72, log: 1.957 },
+                                { id: "ID-JA", persentase: 7.6, jumlah: 274.32, log: 2.028 },
+                                { id: "ID-SS", persentase: 12.71, jumlah: 1073.74, log: 2.542 },
+                                { id: "ID-BE", persentase: 15.23, jumlah: 302.3, log: 2.723 },
+                                { id: "ID-LA", persentase: 12.62, jumlah: 1063.66, log: 2.535 },
+                                { id: "ID-BB", persentase: 4.62, jumlah: 68.38, log: 1.530 },
+                                { id: "ID-KR", persentase: 5.9, jumlah: 128.46, log: 1.775 },
+                                { id: "ID-JK", persentase: 3.47, jumlah: 365.55, log: 1.244 },
+                                { id: "ID-JB", persentase: 6.91, jumlah: 3399.16, log: 1.933 },
+                                { id: "ID-JT", persentase: 10.8, jumlah: 3743.23, log: 2.380 },
+                                { id: "ID-YO", persentase: 11.7, jumlah: 448.47, log: 2.460 },
+                                { id: "ID-JI", persentase: 10.37, jumlah: 4112.25, log: 2.339 },
+                                { id: "ID-BT", persentase: 5.09, jumlah: 654.46, log: 1.627 },
+                                { id: "ID-BA", persentase: 3.79, jumlah: 163.85, log: 1.332 },
+                                { id: "ID-NB", persentase: 14.56, jumlah: 735.96, log: 2.678 },
+                                { id: "ID-NT", persentase: 21.09, jumlah: 1146.32, log: 3.049 },
+                                { id: "ID-KB", persentase: 7.49, jumlah: 378.41, log: 2.014 },
+                                { id: "ID-KT", persentase: 4.98, jumlah: 134.59, log: 1.605 },
+                                { id: "ID-KS", persentase: 4.55, jumlah: 192.48, log: 1.515 },
+                                { id: "ID-KI", persentase: 5.94, jumlah: 219.92, log: 1.782 },
+                                { id: "ID-KU", persentase: 6.63, jumlah: 48.78, log: 1.892 },
+                                { id: "ID-SA", persentase: 7.66, jumlah: 191.7, log: 2.036 },
+                                { id: "ID-ST", persentase: 13.48, jumlah: 410.36, log: 2.601 },
+                                { id: "ID-SN", persentase: 8.69, jumlah: 767.8, log: 2.162 },
+                                { id: "ID-SG", persentase: 11.24, jumlah: 302.58, log: 2.419 },
+                                { id: "ID-GO", persentase: 15.52, jumlah: 186.03, log: 2.742 },
+                                { id: "ID-SR", persentase: 11.02, jumlah: 151.4, log: 2.400 },
+                                { id: "ID-MA", persentase: 17.69, jumlah: 317.69, log: 2.873 },
+                                { id: "ID-MU", persentase: 6.77, jumlah: 84.6, log: 1.913 },
+                                { id: "ID-PB", persentase: 22.17, jumlah: 211.5, log: 3.099 },
+                                { id: "ID-PA", persentase: 27.53, jumlah: 926.36, log: 3.315 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2019");
+                        }
+                        else if (ui.value == 10) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.01, jumlah: 809.76, log: 2.709 },
+                                { id: "ID-SU", persentase: 8.63, jumlah: 1260.5, log: 2.155 },
+                                { id: "ID-SB", persentase: 6.29, jumlah: 343.09, log: 1.839 },
+                                { id: "ID-RI", persentase: 6.9, jumlah: 483.92, log: 1.932 },
+                                { id: "ID-JA", persentase: 7.51, jumlah: 273.37, log: 2.016 },
+                                { id: "ID-SS", persentase: 12.56, jumlah: 1067.16, log: 2.531 },
+                                { id: "ID-BE", persentase: 14.91, jumlah: 298, log: 2.702 },
+                                { id: "ID-LA", persentase: 12.3, jumlah: 1041.48, log: 2.510 },
+                                { id: "ID-BB", persentase: 4.5, jumlah: 67.37, log: 1.504 },
+                                { id: "ID-KR", persentase: 5.8, jumlah: 127.76, log: 1.758 },
+                                { id: "ID-JK", persentase: 3.42, jumlah: 362.3, log: 1.230 },
+                                { id: "ID-JB", persentase: 6.82, jumlah: 3375.89, log: 1.920 },
+                                { id: "ID-JT", persentase: 10.58, jumlah: 3679.4, log: 2.359 },
+                                { id: "ID-YO", persentase: 11.44, jumlah: 440.89, log: 2.437 },
+                                { id: "ID-JI", persentase: 10.2, jumlah: 4056, log: 2.322 },
+                                { id: "ID-BT", persentase: 4.94, jumlah: 641.42, log: 1.597 },
+                                { id: "ID-BA", persentase: 3.61, jumlah: 156.91, log: 1.284 },
+                                { id: "ID-NB", persentase: 13.88, jumlah: 705.68, log: 2.630 },
+                                { id: "ID-NT", persentase: 20.62, jumlah: 1129.46, log: 3.026 },
+                                { id: "ID-KB", persentase: 7.28, jumlah: 370.47, log: 1.985 },
+                                { id: "ID-KT", persentase: 4.81, jumlah: 131.24, log: 1.571 },
+                                { id: "ID-KS", persentase: 4.47, jumlah: 190.29, log: 1.497 },
+                                { id: "ID-KI", persentase: 5.91, jumlah: 220.91, log: 1.777 },
+                                { id: "ID-KU", persentase: 6.49, jumlah: 48.61, log: 1.870 },
+                                { id: "ID-SA", persentase: 7.51, jumlah: 188.6, log: 2.016 },
+                                { id: "ID-ST", persentase: 13.18, jumlah: 404.03, log: 2.579 },
+                                { id: "ID-SN", persentase: 8.56, jumlah: 759.58, log: 2.147 },
+                                { id: "ID-SG", persentase: 11.04, jumlah: 299.97, log: 2.402 },
+                                { id: "ID-GO", persentase: 15.31, jumlah: 184.71, log: 2.729 },
+                                { id: "ID-SR", persentase: 10.95, jumlah: 151.87, log: 2.393 },
+                                { id: "ID-MA", persentase: 17.65, jumlah: 319.51, log: 2.871 },
+                                { id: "ID-MU", persentase: 6.91, jumlah: 87.18, log: 1.933 },
+                                { id: "ID-PB", persentase: 21.51, jumlah: 207.59, log: 3.069 },
+                                { id: "ID-PA", persentase: 26.55, jumlah: 900.95, log: 3.279 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2019");
+                        }
+                        else if (ui.value == 11) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 14.99, jumlah: 814.91, log: 2.707 },
+                                { id: "ID-SU", persentase: 8.75, jumlah: 1283.29, log: 2.169 },
+                                { id: "ID-SB", persentase: 6.28, jumlah: 344.23, log: 1.837 },
+                                { id: "ID-RI", persentase: 6.82, jumlah: 483.39, log: 1.920 },
+                                { id: "ID-JA", persentase: 7.58, jumlah: 277.8, log: 2.026 },
+                                { id: "ID-SS", persentase: 12.66, jumlah: 1081.58, log: 2.538 },
+                                { id: "ID-BE", persentase: 15.03, jumlah: 302.58, log: 2.710 },
+                                { id: "ID-LA", persentase: 12.34, jumlah: 1049.32, log: 2.513 },
+                                { id: "ID-BB", persentase: 4.53, jumlah: 68.39, log: 1.511 },
+                                { id: "ID-KR", persentase: 5.92, jumlah: 131.97, log: 1.778 },
+                                { id: "ID-JK", persentase: 4.53, jumlah: 480.86, log: 1.511 },
+                                { id: "ID-JB", persentase: 7.88, jumlah: 3920.23, log: 2.064 },
+                                { id: "ID-JT", persentase: 11.41, jumlah: 3980.9, log: 2.434 },
+                                { id: "ID-YO", persentase: 12.28, jumlah: 475.72, log: 2.508 },
+                                { id: "ID-JI", persentase: 11.09, jumlah: 4419.1, log: 2.406 },
+                                { id: "ID-BT", persentase: 5.92, jumlah: 775.99, log: 1.778 },
+                                { id: "ID-BA", persentase: 3.78, jumlah: 165.19, log: 1.330 },
+                                { id: "ID-NB", persentase: 13.97, jumlah: 713.89, log: 2.637 },
+                                { id: "ID-NT", persentase: 20.9, jumlah: 1153.76, log: 3.040 },
+                                { id: "ID-KB", persentase: 7.17, jumlah: 366.77, log: 1.970 },
+                                { id: "ID-KT", persentase: 4.82, jumlah: 132.94, log: 1.573 },
+                                { id: "ID-KS", persentase: 4.38, jumlah: 187.87, log: 1.477 },
+                                { id: "ID-KI", persentase: 6.1, jumlah: 230.26, log: 1.808 },
+                                { id: "ID-KU", persentase: 6.8, jumlah: 51.79, log: 1.917 },
+                                { id: "ID-SA", persentase: 7.62, jumlah: 192.37, log: 2.031 },
+                                { id: "ID-ST", persentase: 12.92, jumlah: 398.73, log: 2.559 },
+                                { id: "ID-SN", persentase: 8.72, jumlah: 776.83, log: 2.166 },
+                                { id: "ID-SG", persentase: 11, jumlah: 301.82, log: 2.398 },
+                                { id: "ID-GO", persentase: 15.22, jumlah: 185.02, log: 2.723 },
+                                { id: "ID-SR", persentase: 10.87, jumlah: 152.02, log: 2.386 },
+                                { id: "ID-MA", persentase: 17.44, jumlah: 318.18, log: 2.859 },
+                                { id: "ID-MU", persentase: 6.78, jumlah: 86.37, log: 1.914 },
+                                { id: "ID-PB", persentase: 21.37, jumlah: 208.58, log: 3.062 },
+                                { id: "ID-PA", persentase: 26.64, jumlah: 911.37, log: 3.282 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2020");
+                        }
+                        else if (ui.value == 12) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.43, jumlah: 833.91, log: 2.736 },
+                                { id: "ID-SU", persentase: 9.14, jumlah: 1356.72, log: 2.213 },
+                                { id: "ID-SB", persentase: 6.56, jumlah: 364.79, log: 1.881 },
+                                { id: "ID-RI", persentase: 7.04, jumlah: 491.22, log: 1.952 },
+                                { id: "ID-JA", persentase: 7.97, jumlah: 288.1, log: 2.076 },
+                                { id: "ID-SS", persentase: 12.98, jumlah: 1119.65, log: 2.563 },
+                                { id: "ID-BE", persentase: 15.3, jumlah: 306, log: 2.728 },
+                                { id: "ID-LA", persentase: 12.76, jumlah: 1091.14, log: 2.546 },
+                                { id: "ID-BB", persentase: 4.89, jumlah: 72.05, log: 1.587 },
+                                { id: "ID-KR", persentase: 6.13, jumlah: 142.61, log: 1.813 },
+                                { id: "ID-JK", persentase: 4.69, jumlah: 496.84, log: 1.545 },
+                                { id: "ID-JB", persentase: 8.43, jumlah: 4188.52, log: 2.132 },
+                                { id: "ID-JT", persentase: 11.84, jumlah: 4119.93, log: 2.471 },
+                                { id: "ID-YO", persentase: 12.8, jumlah: 503.14, log: 2.549 },
+                                { id: "ID-JI", persentase: 11.46, jumlah: 4585.97, log: 2.439 },
+                                { id: "ID-BT", persentase: 6.63, jumlah: 857.64, log: 1.892 },
+                                { id: "ID-BA", persentase: 4.45, jumlah: 196.92, log: 1.493 },
+                                { id: "ID-NB", persentase: 14.23, jumlah: 746.04, log: 2.655 },
+                                { id: "ID-NT", persentase: 21.21, jumlah: 1173.53, log: 3.054 },
+                                { id: "ID-KB", persentase: 7.24, jumlah: 370.71, log: 1.980 },
+                                { id: "ID-KT", persentase: 5.26, jumlah: 141.78, log: 1.660 },
+                                { id: "ID-KS", persentase: 4.83, jumlah: 206.92, log: 1.575 },
+                                { id: "ID-KI", persentase: 6.64, jumlah: 243.99, log: 1.893 },
+                                { id: "ID-KU", persentase: 7.41, jumlah: 52.7, log: 2.003 },
+                                { id: "ID-SA", persentase: 7.78, jumlah: 195.85, log: 2.052 },
+                                { id: "ID-ST", persentase: 13.06, jumlah: 403.74, log: 2.570 },
+                                { id: "ID-SN", persentase: 8.99, jumlah: 800.24, log: 2.196 },
+                                { id: "ID-SG", persentase: 11.69, jumlah: 317.32, log: 2.459 },
+                                { id: "ID-GO", persentase: 15.59, jumlah: 185.31, log: 2.747 },
+                                { id: "ID-SR", persentase: 11.5, jumlah: 159.05, log: 2.442 },
+                                { id: "ID-MA", persentase: 17.99, jumlah: 322.4, log: 2.890 },
+                                { id: "ID-MU", persentase: 6.97, jumlah: 87.52, log: 1.942 },
+                                { id: "ID-PB", persentase: 21.7, jumlah: 215.22, log: 3.077 },
+                                { id: "ID-PA", persentase: 26.8, jumlah: 912.23, log: 3.288 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2020");
+                        }
+                        else if (ui.value == 13) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.33, jumlah: 834.24, log: 2.73 },
+                                { id: "ID-SU", persentase: 9.01, jumlah: 1343.86, log: 2.20 },
+                                { id: "ID-SB", persentase: 6.63, jumlah: 370.67, log: 1.89 },
+                                { id: "ID-RI", persentase: 7.12, jumlah: 500.81, log: 1.96 },
+                                { id: "ID-JA", persentase: 8.09, jumlah: 293.86, log: 2.09 },
+                                { id: "ID-SS", persentase: 12.84, jumlah: 1113.76, log: 2.55 },
+                                { id: "ID-BE", persentase: 15.22, jumlah: 306, log: 2.72 },
+                                { id: "ID-LA", persentase: 12.62, jumlah: 1083.93, log: 2.54 },
+                                { id: "ID-BB", persentase: 4.9, jumlah: 72.71, log: 1.59 },
+                                { id: "ID-KR", persentase: 6.12, jumlah: 144.46, log: 1.81 },
+                                { id: "ID-JK", persentase: 4.72, jumlah: 501.92, log: 1.55 },
+                                { id: "ID-JB", persentase: 8.4, jumlah: 4195.34, log: 2.13 },
+                                { id: "ID-JT", persentase: 11.79, jumlah: 4109.75, log: 2.47 },
+                                { id: "ID-YO", persentase: 12.8, jumlah: 506.45, log: 2.55 },
+                                { id: "ID-JI", persentase: 11.4, jumlah: 4572.73, log: 2.43 },
+                                { id: "ID-BT", persentase: 6.66, jumlah: 867.23, log: 1.90 },
+                                { id: "ID-BA", persentase: 4.53, jumlah: 201.97, log: 1.51 },
+                                { id: "ID-NB", persentase: 14.14, jumlah: 746.66, log: 2.65 },
+                                { id: "ID-NT", persentase: 20.99, jumlah: 1169.31, log: 3.04 },
+                                { id: "ID-KB", persentase: 7.15, jumlah: 367.89, log: 1.97 },
+                                { id: "ID-KT", persentase: 5.16, jumlah: 140.04, log: 1.64 },
+                                { id: "ID-KS", persentase: 4.83, jumlah: 208.11, log: 1.57 },
+                                { id: "ID-KI", persentase: 6.54, jumlah: 241.77, log: 1.88 },
+                                { id: "ID-KU", persentase: 7.36, jumlah: 52.86, log: 2.00 },
+                                { id: "ID-SA", persentase: 7.77, jumlah: 196.35, log: 2.05 },
+                                { id: "ID-ST", persentase: 13, jumlah: 404.44, log: 2.56 },
+                                { id: "ID-SN", persentase: 8.78, jumlah: 784.98, log: 2.17 },
+                                { id: "ID-SG", persentase: 11.66, jumlah: 318.7, log: 2.46 },
+                                { id: "ID-GO", persentase: 15.61, jumlah: 186.29, log: 2.75 },
+                                { id: "ID-SR", persentase: 11.29, jumlah: 157.19, log: 2.42 },
+                                { id: "ID-MA", persentase: 17.87, jumlah: 321.81, log: 2.88 },
+                                { id: "ID-MU", persentase: 6.89, jumlah: 87.16, log: 1.93 },
+                                { id: "ID-PB", persentase: 21.84, jumlah: 219.07, log: 3.08 },
+                                { id: "ID-PA", persentase: 26.86, jumlah: 920.44, log: 3.29 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2021");
+                        }
+                        else if (ui.value == 14) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 15.53, jumlah: 850.26, log: 2.74 },
+                                { id: "ID-SU", persentase: 8.49, jumlah: 1273.07, log: 2.14 },
+                                { id: "ID-SB", persentase: 6.04, jumlah: 339.93, log: 1.80 },
+                                { id: "ID-RI", persentase: 7, jumlah: 496.66, log: 1.95 },
+                                { id: "ID-JA", persentase: 7.67, jumlah: 279.86, log: 2.04 },
+                                { id: "ID-SS", persentase: 12.79, jumlah: 1116.61, log: 2.55 },
+                                { id: "ID-BE", persentase: 14.43, jumlah: 291.79, log: 2.67 },
+                                { id: "ID-LA", persentase: 11.67, jumlah: 1007.02, log: 2.46 },
+                                { id: "ID-BB", persentase: 4.67, jumlah: 69.7, log: 1.54 },
+                                { id: "ID-KR", persentase: 5.75, jumlah: 137.75, log: 1.75 },
+                                { id: "ID-JK", persentase: 4.67, jumlah: 498.29, log: 1.54 },
+                                { id: "ID-JB", persentase: 7.97, jumlah: 4004.86, log: 2.08 },
+                                { id: "ID-JT", persentase: 11.25, jumlah: 3934.01, log: 2.42 },
+                                { id: "ID-YO", persentase: 11.91, jumlah: 474.49, log: 2.48 },
+                                { id: "ID-JI", persentase: 10.59, jumlah: 4259.6, log: 2.36 },
+                                { id: "ID-BT", persentase: 6.5, jumlah: 852.28, log: 1.87 },
+                                { id: "ID-BA", persentase: 4.72, jumlah: 211.46, log: 1.55 },
+                                { id: "ID-NB", persentase: 13.83, jumlah: 735.3, log: 2.63 },
+                                { id: "ID-NT", persentase: 20.44, jumlah: 1146.28, log: 3.02 },
+                                { id: "ID-KB", persentase: 6.84, jumlah: 354, log: 1.92 },
+                                { id: "ID-KT", persentase: 5.16, jumlah: 141.03, log: 1.64 },
+                                { id: "ID-KS", persentase: 4.56, jumlah: 197.76, log: 1.52 },
+                                { id: "ID-KI", persentase: 6.27, jumlah: 233.13, log: 1.84 },
+                                { id: "ID-KU", persentase: 6.83, jumlah: 49.49, log: 1.92 },
+                                { id: "ID-SA", persentase: 7.36, jumlah: 186.55, log: 2.00 },
+                                { id: "ID-ST", persentase: 12.18, jumlah: 381.21, log: 2.50 },
+                                { id: "ID-SN", persentase: 8.53, jumlah: 765.46, log: 2.14 },
+                                { id: "ID-SG", persentase: 11.74, jumlah: 323.26, log: 2.46 },
+                                { id: "ID-GO", persentase: 15.41, jumlah: 184.6, log: 2.74 },
+                                { id: "ID-SR", persentase: 11.85, jumlah: 165.99, log: 2.47 },
+                                { id: "ID-MA", persentase: 16.3, jumlah: 294.97, log: 2.79 },
+                                { id: "ID-MU", persentase: 6.38, jumlah: 81.18, log: 1.85 },
+                                { id: "ID-PB", persentase: 21.82, jumlah: 221.29, log: 3.08 },
+                                { id: "ID-PA", persentase: 27.38, jumlah: 944.49, log: 3.31 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2021");
+                        }
+                        else if (ui.value == 15) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 14.64, jumlah: 806.82, log: 2.68 },
+                                { id: "ID-SU", persentase: 8.42, jumlah: 1268.19, log: 2.13 },
+                                { id: "ID-SB", persentase: 5.92, jumlah: 335.21, log: 1.78 },
+                                { id: "ID-RI", persentase: 6.78, jumlah: 485.03, log: 1.91 },
+                                { id: "ID-JA", persentase: 7.62, jumlah: 279.37, log: 2.03 },
+                                { id: "ID-SS", persentase: 11.9, jumlah: 1044.69, log: 2.48 },
+                                { id: "ID-BE", persentase: 14.62, jumlah: 297.23, log: 2.68 },
+                                { id: "ID-LA", persentase: 11.57, jumlah: 1002.41, log: 2.45 },
+                                { id: "ID-BB", persentase: 4.45, jumlah: 66.78, log: 1.49 },
+                                { id: "ID-KR", persentase: 6.24, jumlah: 151.68, log: 1.83 },
+                                { id: "ID-JK", persentase: 4.69, jumlah: 502.04, log: 1.55 },
+                                { id: "ID-JB", persentase: 8.06, jumlah: 4070.98, log: 2.09 },
+                                { id: "ID-JT", persentase: 10.93, jumlah: 3831.44, log: 2.39 },
+                                { id: "ID-YO", persentase: 11.34, jumlah: 454.76, log: 2.43 },
+                                { id: "ID-JI", persentase: 10.38, jumlah: 4181.29, log: 2.34 },
+                                { id: "ID-BT", persentase: 6.16, jumlah: 814.02, log: 1.82 },
+                                { id: "ID-BA", persentase: 4.57, jumlah: 205.68, log: 1.52 },
+                                { id: "ID-NB", persentase: 13.68, jumlah: 731.94, log: 2.62 },
+                                { id: "ID-NT", persentase: 20.05, jumlah: 1131.62, log: 3.00 },
+                                { id: "ID-KB", persentase: 6.73, jumlah: 350.25, log: 1.91 },
+                                { id: "ID-KT", persentase: 5.28, jumlah: 145.1, log: 1.66 },
+                                { id: "ID-KS", persentase: 4.49, jumlah: 195.7, log: 1.50 },
+                                { id: "ID-KI", persentase: 6.31, jumlah: 236.25, log: 1.84 },
+                                { id: "ID-KU", persentase: 6.77, jumlah: 49.46, log: 1.91 },
+                                { id: "ID-SA", persentase: 7.28, jumlah: 185.14, log: 1.99 },
+                                { id: "ID-ST", persentase: 12.33, jumlah: 388.35, log: 2.51 },
+                                { id: "ID-SN", persentase: 8.63, jumlah: 777.44, log: 2.16 },
+                                { id: "ID-SG", persentase: 11.17, jumlah: 309.79, log: 2.41 },
+                                { id: "ID-GO", persentase: 15.42, jumlah: 185.44, log: 2.74 },
+                                { id: "ID-SR", persentase: 11.75, jumlah: 165.72, log: 2.46 },
+                                { id: "ID-MA", persentase: 15.97, jumlah: 290.57, log: 2.77 },
+                                { id: "ID-MU", persentase: 6.23, jumlah: 79.87, log: 1.83 },
+                                { id: "ID-PB", persentase: 21.33, jumlah: 218.78, log: 3.06 },
+                                { id: "ID-PA", persentase: 26.56, jumlah: 922.12, log: 3.28 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2022");
+                        }
+                        else if (ui.value == 16) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 14.75, jumlah: 818.47, log: 2.69 },
+                                { id: "ID-SU", persentase: 8.33, jumlah: 1262.09, log: 2.12 },
+                                { id: "ID-SB", persentase: 6.04, jumlah: 343.82, log: 1.80 },
+                                { id: "ID-RI", persentase: 6.84, jumlah: 493.13, log: 1.92 },
+                                { id: "ID-JA", persentase: 7.7, jumlah: 283.82, log: 2.04 },
+                                { id: "ID-SS", persentase: 11.95, jumlah: 1054.99, log: 2.48 },
+                                { id: "ID-BE", persentase: 14.34, jumlah: 292.93, log: 2.66 },
+                                { id: "ID-LA", persentase: 11.44, jumlah: 995.59, log: 2.44 },
+                                { id: "ID-BB", persentase: 4.61, jumlah: 69.69, log: 1.53 },
+                                { id: "ID-KR", persentase: 6.03, jumlah: 148.89, log: 1.80 },
+                                { id: "ID-JK", persentase: 4.61, jumlah: 494.93, log: 1.53 },
+                                { id: "ID-JB", persentase: 7.98, jumlah: 4053.62, log: 2.08 },
+                                { id: "ID-JT", persentase: 10.98, jumlah: 3858.23, log: 2.40 },
+                                { id: "ID-YO", persentase: 11.49, jumlah: 463.63, log: 2.44 },
+                                { id: "ID-JI", persentase: 10.49, jumlah: 4236.51, log: 2.35 },
+                                { id: "ID-BT", persentase: 6.24, jumlah: 829.66, log: 1.83 },
+                                { id: "ID-BA", persentase: 4.53, jumlah: 205.36, log: 1.51 },
+                                { id: "ID-NB", persentase: 13.82, jumlah: 744.69, log: 2.63 },
+                                { id: "ID-NT", persentase: 20.23, jumlah: 1149.17, log: 3.01 },
+                                { id: "ID-KB", persentase: 6.81, jumlah: 356.51, log: 1.92 },
+                                { id: "ID-KT", persentase: 5.22, jumlah: 144.52, log: 1.65 },
+                                { id: "ID-KS", persentase: 4.61, jumlah: 201.95, log: 1.53 },
+                                { id: "ID-KI", persentase: 6.44, jumlah: 242.3, log: 1.86 },
+                                { id: "ID-KU", persentase: 6.86, jumlah: 50.58, log: 1.93 },
+                                { id: "ID-SA", persentase: 7.34, jumlah: 187.33, log: 1.99 },
+                                { id: "ID-ST", persentase: 12.3, jumlah: 389.71, log: 2.51 },
+                                { id: "ID-SN", persentase: 8.66, jumlah: 782.32, log: 2.16 },
+                                { id: "ID-SG", persentase: 11.27, jumlah: 314.74, log: 2.42 },
+                                { id: "ID-GO", persentase: 15.51, jumlah: 187.35, log: 2.74 },
+                                { id: "ID-SR", persentase: 11.92, jumlah: 169.26, log: 2.48 },
+                                { id: "ID-MA", persentase: 16.23, jumlah: 296.66, log: 2.79 },
+                                { id: "ID-MU", persentase: 6.37, jumlah: 82.13, log: 1.85 },
+                                { id: "ID-PB", persentase: 21.43, jumlah: 222.36, log: 3.06 },
+                                { id: "ID-PA", persentase: 26.8, jumlah: 936.32, log: 3.29 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("September 2022");
+                        }
+                        else if (ui.value == 17) {
+                            polygonSeries.data.setAll([
+                                { id: "ID-AC", persentase: 14.45, jumlah: 806.75, log: 2.67 },
+                                { id: "ID-SU", persentase: 8.15, jumlah: 1239.71, log: 2.10 },
+                                { id: "ID-SB", persentase: 5.95, jumlah: 340.37, log: 1.78 },
+                                { id: "ID-RI", persentase: 6.68, jumlah: 485.66, log: 1.90 },
+                                { id: "ID-JA", persentase: 7.58, jumlah: 280.68, log: 2.03 },
+                                { id: "ID-SS", persentase: 11.78, jumlah: 1045.68, log: 2.47 },
+                                { id: "ID-BE", persentase: 14.04, jumlah: 288.46, log: 2.64 },
+                                { id: "ID-LA", persentase: 11.11, jumlah: 970.67, log: 2.41 },
+                                { id: "ID-BB", persentase: 4.52, jumlah: 68.69, log: 1.51 },
+                                { id: "ID-KR", persentase: 5.69, jumlah: 142.5, log: 1.74 },
+                                { id: "ID-JK", persentase: 4.44, jumlah: 477.83, log: 1.49 },
+                                { id: "ID-JB", persentase: 7.62, jumlah: 3888.6, log: 2.03 },
+                                { id: "ID-JT", persentase: 10.77, jumlah: 3791.5, log: 2.38 },
+                                { id: "ID-YO", persentase: 11.04, jumlah: 448.47, log: 2.40 },
+                                { id: "ID-JI", persentase: 10.35, jumlah: 4188.81, log: 2.34 },
+                                { id: "ID-BT", persentase: 6.17, jumlah: 826.13, log: 1.82 },
+                                { id: "ID-BA", persentase: 4.25, jumlah: 193.78, log: 1.45 },
+                                { id: "ID-NB", persentase: 13.85, jumlah: 751.23, log: 2.63 },
+                                { id: "ID-NT", persentase: 19.96, jumlah: 1141.11, log: 2.99 },
+                                { id: "ID-KB", persentase: 6.71, jumlah: 353.35, log: 1.90 },
+                                { id: "ID-KT", persentase: 5.11, jumlah: 142.17, log: 1.63 },
+                                { id: "ID-KS", persentase: 4.29, jumlah: 188.93, log: 1.46 },
+                                { id: "ID-KI", persentase: 6.11, jumlah: 231.07, log: 1.81 },
+                                { id: "ID-KU", persentase: 6.45, jumlah: 47.97, log: 1.86 },
+                                { id: "ID-SA", persentase: 7.38, jumlah: 189, log: 2.00 },
+                                { id: "ID-ST", persentase: 12.41, jumlah: 395.66, log: 2.52 },
+                                { id: "ID-SN", persentase: 8.7, jumlah: 788.85, log: 2.16 },
+                                { id: "ID-SG", persentase: 11.43, jumlah: 321.53, log: 2.44 },
+                                { id: "ID-GO", persentase: 15.15, jumlah: 183.71, log: 2.72 },
+                                { id: "ID-SR", persentase: 11.49, jumlah: 164.14, log: 2.44 },
+                                { id: "ID-MA", persentase: 16.42, jumlah: 301.61, log: 2.80 },
+                                { id: "ID-MU", persentase: 6.46, jumlah: 83.8, log: 1.87 },
+                                { id: "ID-PB", persentase: 20.49, jumlah: 214.98, log: 3.02 },
+                                { id: "ID-PA", persentase: 26.03, jumlah: 915.15, log: 3.26 },
+                                { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
+                                { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
+                            ]);
+                            $('#tahundata').text("Maret 2023");
+                        }
+                        polygonSeries.appear(300, 100);
+                    }
+                });
+
+                var heatLegend = chart.children.push(am5.HeatLegend.new(root, {
+                    orientation: "vertical",
+                    startColor: am5.color(0x04AA6D),
+                    endColor: am5.color(0xf47d62),
+                    startText: "Lowest",
+                    endText: "Highest",
+                    stepCount: 1
+                }));
+
+                heatLegend.startLabel.setAll({
+                    fontSize: 12,
+                    fill: heatLegend.get("startColor")
+                });
+
+                heatLegend.endLabel.setAll({
+                    fontSize: 12,
+                    fill: heatLegend.get("endColor")
+                });
+
+                // change this to template when possible
+                polygonSeries.events.on("datavalidated", function () {
+                    heatLegend.set("startValue", polygonSeries.getPrivate("valueLow"));
+                    heatLegend.set("endValue", polygonSeries.getPrivate("valueHigh"));
+                });
+
+
+
+            }); // end
         });
 
 
@@ -589,6 +1392,7 @@
                 $("#narasi-populasi-1").animate({ opacity: 0 }, { queue: false, duration: 'slow' });
                 animPopulasi.playSegments([105, 270], true);
                 $("#narasi-populasi-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                $("#narasi-populasi-3").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
                 $("#section-datakemiskinan").show();
@@ -660,6 +1464,16 @@
             }
         });
 
+        $("#button-mulai").click(function () {
+            $("#section-basicneed").show();
+            $("html").animate(
+                {
+                    scrollTop: $("#section-basicneed").offset().top
+                },
+                'slow'
+            );
+        });
+
         $("#button-next-program").click(function () {
 
             $("#section-panah").show();
@@ -672,71 +1486,92 @@
 
         });
 
-        $("#button-mulai").click(function () {
-            if ($("#section-proporsi").is(":hidden")) {
-                $("#section-proporsi").show();
-                $("html").animate(
-                    {
-                        scrollTop: $("#section-proporsi").offset().top + 100
-                    },
-                    500
-                );
-                am5.ready(function () {
-
-                    // Create root element
-                    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                    var root = am5.Root.new("chartdiv");
-
-                    // Set themes
-                    // https://www.amcharts.com/docs/v5/concepts/themes/
-                    root.setThemes([
-                        am5themes_Animated.new(root)
-                    ]);
-
-                    // Create chart
-                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-                    var chart = root.container.children.push(
-                        am5percent.PieChart.new(root, {
-                            endAngle: 270
-                        })
-                    );
-
-                    // Create series
-                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-                    var series = chart.series.push(
-                        am5percent.PieSeries.new(root, {
-                            valueField: "value",
-                            categoryField: "category",
-                            endAngle: 270,
-                            alignLabels: false
-                        })
-                    );
-
-                    series.states.create("hidden", {
-                        endAngle: -90
-                    });
-
-                    // Set data
-                    // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-                    series.data.setAll([{
-                        category: "Miskin",
-                        value: 9.36
-                    }, {
-                        category: "Tidak Miskin",
-                        value: 90.64
-                    }]);
-
-                    series.appear(1000, 1000);
-
-                });
+        $("#button-next-basicneed").click(function () {
+            if ($("#narasi-basicneed-2").css('opacity') == 0) {
+                $("#narasi-basicneed-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
+                $("#section-povertyline").show();
                 $("html").animate(
                     {
-                        scrollTop: $("#section-proporsi").offset().top + 100
+                        scrollTop: $("#section-povertyline").offset().top
                     },
-                    500
+                    'slow'
                 );
+            }
+        });
+
+        $("#button-next-povertyline").click(function () {
+            if ($("#narasi-povertyline-2").css('opacity') == 0) {
+                $("#narasi-povertyline-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
+                animPopulasi.playSegments([90, 150], true);
+            }
+            else {
+                if ($("#section-proporsi").is(":hidden")) {
+                    $("#section-proporsi").show();
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-proporsi").offset().top + 100
+                        },
+                        500
+                    );
+                    am5.ready(function () {
+
+                        // Create root element
+                        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+                        var root = am5.Root.new("chartdiv");
+
+                        // Set themes
+                        // https://www.amcharts.com/docs/v5/concepts/themes/
+                        root.setThemes([
+                            am5themes_Animated.new(root)
+                        ]);
+
+                        // Create chart
+                        // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+                        var chart = root.container.children.push(
+                            am5percent.PieChart.new(root, {
+                                endAngle: 270
+                            })
+                        );
+
+                        // Create series
+                        // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+                        var series = chart.series.push(
+                            am5percent.PieSeries.new(root, {
+                                valueField: "value",
+                                categoryField: "category",
+                                endAngle: 270,
+                                alignLabels: false
+                            })
+                        );
+
+                        series.states.create("hidden", {
+                            endAngle: -90
+                        });
+
+                        // Set data
+                        // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+                        series.data.setAll([{
+                            category: "Miskin",
+                            value: 9.36
+                        }, {
+                            category: "Tidak Miskin",
+                            value: 90.64
+                        }]);
+
+                        series.appear(1000, 1000);
+
+                    });
+                }
+                else {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-proporsi").offset().top + 100
+                        },
+                        500
+                    );
+                }
             }
         });
 

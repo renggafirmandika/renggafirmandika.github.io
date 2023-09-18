@@ -89,16 +89,17 @@ h3 {
 }
 
 .oleh {
-    padding-top: 20px;
-    font-size: 18px;
-    color: rgb(99, 99, 99);
+    /* padding-top: 20px; */
+    font-size: 15px;
+    color: rgb(34, 34, 34);
     font-family: "Google Sans", "Noto Sans", sans-serif;
 }
 
 .oleh2 {
     text-align: center;
-    color: rgb(61, 59, 59);
+    color: white;
     font-size: 22px !important;
+    background-color: black;
 }
 
 @keyframes scroll {
@@ -122,25 +123,70 @@ svg #wheel {
     padding: 30px;
 }
 
-#animasi-tahun {
-    width: 80%;
-    margin: auto;
+@media only screen and (min-width:600px) {
+    #animasi-tahun {
+        width: 100%;
+        margin: auto;
+    }
+
+    #animasi-grafik {
+        width: 100%;
+        margin: auto;
+    }
+
+    #animasi-panah {
+        width: 100%;
+        margin: auto;
+    }
+
+    #animasi-populasi {
+        width: 100%;
+        margin: auto;
+    }
+
+    #animasi-basicneed {
+        width: 100%;
+        margin: auto;
+    }
+
+    #animasi-povertyline {
+        width: 100%;
+        margin: auto;
+    }
 }
 
-#animasi-grafik {
-    width: 80%;
-    margin: auto;
+@media only screen and (min-width:1200px) {
+    #animasi-tahun {
+        width: 80%;
+        margin: auto;
+    }
+
+    #animasi-grafik {
+        width: 80%;
+        margin: auto;
+    }
+
+    #animasi-panah {
+        width: 80%;
+        margin: auto;
+    }
+
+    #animasi-populasi {
+        width: 80%;
+        margin: auto;
+    }
+
+    #animasi-basicneed {
+        width: 80%;
+        margin: auto;
+    }
+
+    #animasi-povertyline {
+        width: 70%;
+        margin: auto;
+    }
 }
 
-#animasi-panah {
-    width: 80%;
-    margin: auto;
-}
-
-#animasi-populasi {
-    width: 80%;
-    margin: auto;
-}
 
 .tampilan_grid {
     height: 100vh;
@@ -436,4 +482,49 @@ img {
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+}
+
+.range-container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+#sliderTahun {
+    width: 6em;
+    height: 2.5em;
+    top: 50%;
+    margin-top: -1.3em;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 1em;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    background: #979797 !important;
+    font-weight: normal !important;
+    color: white !important;
+    border-radius: 20px !important;
+    border: none !important;
+    padding-top: 6px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.3em;
+    margin-left: -2.5em !important;
+}
+
+#videoCover {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    max-height: 100vh;
+    object-fit: cover;
+    z-index: -10;
 }
