@@ -184,7 +184,7 @@
                                         dikatakan <span class="yellow-text">miskin</span> apabila memiliki
                                         rata-rata <span class="yellow-text">pengeluaran</span> per bulan di bawah garis
                                         kemiskinan nasional, yaitu
-                                        <span class="yellow-text">Rp550.458/orang/bulan</span>*. 
+                                        <span class="yellow-text">Rp550.458/orang/bulan</span>*.
                                     </h2>
                                     <h3 class="subtext">*kondisi Maret 2023</h3>
                                 </div>
@@ -675,7 +675,7 @@
                             { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
                             { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
                         ]);
-                        polygonSeries.appear(1000, 300);
+                        
                     },
                     slide: function (event, ui) {
                         handle.text(sliderText[ui.value - 1]);
@@ -1418,13 +1418,14 @@
                 $("#animasi-orang").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-grafik").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-grafik").offset().top + 100
-                    },
-                    500
-                );
+                $("#section-grafik").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-grafik").offset().top + 100
+                        },
+                        'slow'
+                    );
+                });
             }
         });
 
@@ -1433,13 +1434,14 @@
                 $("#narasi-panah-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-regsosek").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#myVideo").offset().top
-                    },
-                    500
-                );
+                $("#section-regsosek").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#myVideo").offset().top
+                        },
+                        'slow'
+                    );
+                });
             }
         });
 
@@ -1451,24 +1453,27 @@
                 $("#narasi-populasi-3").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-datakemiskinan").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-datakemiskinan").offset().top + 100
-                    },
-                    500
-                );
+                $("#section-datakemiskinan").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-datakemiskinan").offset().top + 100
+                        },
+                        'slow'
+                    );
+                });
+
             }
         });
 
         $("#button-next-datakemiskinan").click(function () {
-            $("#section-loader").show();
-            $("html").delay(50).animate(
-                {
-                    scrollTop: $("#section-loader").offset().top
-                },
-                500
-            );
+            $("#section-loader").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-loader").offset().top
+                    },
+                    'slow'
+                );
+            });
         });
 
         $("#button-next-loader").click(function () {
@@ -1476,13 +1481,14 @@
                 $("#narasi-loader-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-program").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-program").offset().top + 100
-                    },
-                    500
-                );
+                $("#section-program").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-program").offset().top + 100
+                        },
+                        'slow'
+                    );
+                });
             }
         });
 
@@ -1494,10 +1500,11 @@
                 }
                 else if ($("#narasi-grafik-2").css('opacity') == 1) {
                     anim4.playSegments([90, 240], true);
-                    $("#narasi-grafik-1").fadeOut();
+                    $("#narasi-grafik-1").fadeOut(function () {
+                        $("#narasi-grafik-1").html('Sementara itu, <span class="orange-text">kemiskinan nasional</span> dari tahun <span class="orange-text">2015-2023</span> hanya berkurang sebesar <span class= "orange-text">1,86%</span>.');
+                        $("#narasi-grafik-1").fadeIn();
+                    });
                     $("#narasi-grafik-2").animate({ opacity: 0 }, { queue: false, duration: 'slow' });
-                    $("#narasi-grafik-1").html('Sementara itu, <span class="orange-text">kemiskinan nasional</span> dari tahun <span class="orange-text">2015-2023</span> hanya berkurang sebesar <span class= "orange-text">1,86%</span>.');
-                    $("#narasi-grafik-1").fadeIn();
                     flagGrafik = 2;
                     console.log(flagGrafik);
                 }
@@ -1509,13 +1516,14 @@
                     console.log(flagGrafik);
                 }
                 else {
-                    $("#section-populasi").show();
-                    $("html").delay(50).animate(
-                        {
-                            scrollTop: $("#section-populasi").offset().top + 100
-                        },
-                        500
-                    );
+                    $("#section-populasi").show(function () {
+                        $("html").animate(
+                            {
+                                scrollTop: $("#section-populasi").offset().top + 100
+                            },
+                            'slow'
+                        );
+                    });
                 }
             }
         });
@@ -1525,36 +1533,38 @@
                 $("#narasi-regsosek-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-closing").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-closing").offset().top + 100
-                    },
-                    500
-                );
+                $("#section-closing").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-closing").offset().top + 100
+                        },
+                        'slow'
+                    );
+                });
             }
         });
 
         $("#button-mulai").click(function () {
-            $("#section-basicneed").show();
-            $("html").delay(50).animate(
-                {
-                    scrollTop: $("#section-basicneed").offset().top
-                },
-                'slow'
-            );
+            $("#section-basicneed").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-basicneed").offset().top
+                    },
+                    'slow'
+                );
+            });
         });
 
         $("#button-next-program").click(function () {
 
-            $("#section-panah").show();
-            $("html").delay(50).animate(
-                {
-                    scrollTop: $("#section-panah").offset().top + 100,
-                },
-                'slow'
-            );
-
+            $("#section-panah").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-panah").offset().top + 100,
+                    },
+                    'slow'
+                );
+            });
         });
 
         $("#button-next-basicneed").click(function () {
@@ -1562,13 +1572,15 @@
                 $("#narasi-basicneed-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             }
             else {
-                $("#section-povertyline").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-povertyline").offset().top
-                    },
-                    'slow'
-                );
+                $("#section-povertyline").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-povertyline").offset().top
+                        },
+                        'slow'
+                    );
+                });
+
             }
         });
 
@@ -1578,13 +1590,15 @@
                 animPovertyline.playSegments([90, 150], true);
             }
             else {
-                $("#section-grafik").show();
-                $("html").delay(50).animate(
-                    {
-                        scrollTop: $("#section-grafik").offset().top + 100
-                    },
-                    500
-                );
+                $("#section-grafik").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-grafik").offset().top + 100
+                        },
+                        500
+                    );
+                });
+
 
                 // if ($("#section-proporsi").is(":hidden")) {
                 //     $("#section-proporsi").show();
