@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: auto !important;
+}
+
 * {
     box-sizing: border-box;
 }
