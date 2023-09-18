@@ -181,7 +181,8 @@
                                 </h2>
                                 <div id="narasi-povertyline-2">
                                     <h2 class="narasi2 narasi-mid">Sementara itu, penduduk
-                                        dikatakan <span class="yellow-text">miskin</span> (miskin nasional) apabila memiliki
+                                        dikatakan <span class="yellow-text">miskin</span> (miskin nasional) apabila
+                                        memiliki
                                         rata-rata <span class="yellow-text">pengeluaran</span> per bulan di bawah garis
                                         kemiskinan nasional, yaitu
                                         <span class="yellow-text">Rp550.458/orang/bulan</span>*.
@@ -283,7 +284,7 @@
                     <div class="isi_flex" id="narasi-populasi">
                         <div id="animasi-populasi">
                         </div>
-                        <h2 id="narasi-populasi-1" class="narasi" data-aos="zoom-in" data-aos-duration="1000">
+                        <h2 id="narasi-populasi-1" class="narasi" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
                             Jumlah penduduk miskin sebesar <span class="yellow-text">25,8 juta jiwa</span> ini
                             hampir <span class="yellow-text">5 kali lipat jumlah penduduk Singapura</span>.
                         </h2>
@@ -383,28 +384,25 @@
             <div style="z-index: 6; position: relative;" class="pin">
                 <section class="s_intro wf-section" id="section-program">
                     <div class="c_main2 tampilan_grid">
-                        <div class="isi_flex" id="narasi-5">
-                            <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Selama ini,
+                        <div class="isi_flex" id="narasi-5" data-aos="zoom-out" data-aos-duration="1000">
+                            <h2 class="narasi">Selama ini,
                                 pemerintah Indonesia telah menggulirkan beberapa <span class="yellow-text">program
                                     bantuan sosial</span>, seperti:
                             </h2>
                             <div class="flex-group">
-                                <div class="col-lg-4 flex container-gambar" data-aos="fade-up" data-aos-duration="2000"
-                                    data-aos-delay="300">
+                                <div class="col-lg-4 flex container-gambar">
                                     <img src="assets/kks.png" alt="">
                                     <h3 class="narasi">Kartu Keluarga
                                         Sejahtera (KKS) dan BPNT/Program Sembako
                                     </h3>
                                 </div>
-                                <div class="col-lg-4 flex container-gambar" data-aos="fade-up" data-aos-duration="2000"
-                                    data-aos-delay="600">
+                                <div class="col-lg-4 flex container-gambar">
                                     <img src="assets/kip.png" alt="">
                                     <h3 class="narasi">Program Indonesia
                                         Pintar (PIP)
                                     </h3>
                                 </div>
-                                <div class="col-lg-4 flex container-gambar" data-aos="fade-up" data-aos-duration="2000"
-                                    data-aos-delay="900">
+                                <div class="col-lg-4 flex container-gambar">
                                     <img src="assets/pkh.png" alt="">
                                     <h3 class="narasi">Program Keluarga
                                         Harapan (PKH)
@@ -485,10 +483,9 @@
                 </section>
             </div>
             <div style="z-index: 8; position: relative;">
-                <section class="s_intro wf-section section" id="section-closing">
+                <section class="section" id="section-closing">
                     <div class="c_main2 tampilan_grid">
                         <div class="isi_flex" id="narasi-8">
-                            <div id="animasi-closing">
                             </div>
                             <h2 class="narasi" data-aos="zoom-in" data-aos-duration="1000">Can we end poverty? <span
                                     data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="3000">Let's believe
@@ -503,6 +500,32 @@
     </main>
     <footer>
         <!-- place footer here -->
+        <div class="kredit" id="kredit">
+            <span class="sumber">Sumber:</span>
+            <br>
+            <span class="list-sumber"> World Bank.(2023).Poverty & Equity Brief Indonesia. Diakses pada 11 September 2023, dari
+                https://pip.worldbank.org/country-profiles/IDN</span>
+           
+            <br>
+            <span class="list-sumber">Badan Pusat Statistik. (2022).Perhitungan dan Analisis Kemiskinan Makro Indonesia. Jakarta:Badan Pusat
+                Statistik</span>
+            
+            <br>
+            <span class="list-sumber">Badan Pusat Statistik. (2023).Profil Kemiskinan di Indonesia Maret 2023. Jakarta:Badan Pusat Statistik</span>
+            
+            <br>
+            <span class="list-sumber">
+                Badan Pusat Statistik.(2023).Jumlah Penduduk Miskin (Ribu Jiwa) Menurut Provinsi dan Daerah 2007-2023.
+                Diakses pada 11 September 2023, dari https://www.bps.go.id/indicator/23/185/1/jumlah-penduduk-miskin-ribu-jiwa-menurut-provinsi-dan-daerah.html
+            </span>
+            
+            <br>
+            <span class="list-sumber">
+                Badan Pusat Statistik.(2023).Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah 2007-2023. Diakses
+                pada 11 September 2023, dari
+                https://www.bps.go.id/indicator/23/192/1/persentase-penduduk-miskin-p0-menurut-provinsi-dan-daerah.html
+            </span>
+        </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -569,6 +592,7 @@
             $("#section-basicneed").hide();
             $("#section-povertyline").hide();
             $("#section-loader").hide();
+            $("#kredit").hide();
 
             $(window).scroll(function () {
                 $('.hideme').each(function (i) {
@@ -675,7 +699,7 @@
                             { id: "ID1", persentase: 0, jumlah: 0, log: 1.2 },
                             { id: "ID2", persentase: 0, jumlah: 0, log: 3.5 }
                         ]);
-                        
+
                     },
                     slide: function (event, ui) {
                         handle.text(sliderText[ui.value - 1]);
@@ -1536,10 +1560,11 @@
                 $("#section-closing").show(function () {
                     $("html").animate(
                         {
-                            scrollTop: $("#section-closing").offset().top + 100
+                            scrollTop: $("#section-closing").offset().top
                         },
                         'slow'
                     );
+                    $("#kredit").show();
                 });
             }
         });
