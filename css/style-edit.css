@@ -644,3 +644,7 @@ a:active {
 .sumber-body {
     background: none !important;
 }
+
+.card {
+    background-color: black;
+}
