@@ -171,8 +171,9 @@ svg #wheel {
     }
 
     #animasi-loader {
-        width: 80%;
+        width: 60%;
         margin: auto;
+        padding: 50px;
     }
 }
 
@@ -215,8 +216,9 @@ svg #wheel {
     }
 
     #animasi-loader {
-        width: 50%;
+        width: 90%;
         margin: auto;
+        padding: 50px;
     }
 }
 
