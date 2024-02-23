@@ -143,7 +143,8 @@
                                             ekonomi</span> untuk memenuhi <span class="orange-text">kebutuhan
                                             dasarnya</span>.
                                     </h2>
-                                    <h2 class="narasi2" id="narasi-basicneed-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">
+                                    <h2 class="narasi2" id="narasi-basicneed-2" data-aos="zoom-out"
+                                        data-aos-duration="1000" data-aos-delay="1000">
                                         Dalam SDGs, kemiskinan dibedakan menjadi 2, yaitu: <span
                                             class="orange-text">kemiskinan ekstrem</span> dan <span
                                             class="orange-text">kemiskinan nasional</span>.
@@ -311,26 +312,21 @@
             <div style="z-index: 4; position: relative;">
                 <section class="s_intro wf-section" id="section-loader">
                     <div class="c_main2 tampilan_grid">
-                        <div class="flex-group" id="narasi-loader">
-                            <div class="col-lg-6 flex">
-                                <div>
-                                    <h2 class="narasi2 narasi-mid" data-aos="zoom-out" data-aos-duration="1000">
-                                        Berdasarkan
-                                        data,
-                                        sebenarnya tingkat <span class="orange-text">kemiskinan ekstrem</span> dan <span
-                                            class="orange-text">kemiskinan nasional</span> sudah mengalami penurunan
-                                        dibanding tahun 2015.
-                                    </h2>
-                                    <h2 class="narasi2 narasi-mid"  data-aos="zoom-out" id="narasi-loader-2" data-aos-duration="1000" data-aos-delay="1000">
-                                        Namun, upaya percepatan untuk menurunkan kemiskinan harus dilakukan untuk
-                                        mencapai
-                                        <span class="orange-text">no poverty</span> di tahun 2030.
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 flex">
-                                <div id="animasi-loader"></div>
-                            </div>
+                        <div class="isi_flex" id="narasi-loader">
+                            <div id="animasi-loader"></div>
+                            <h2 class="narasi2 narasi-mid" data-aos="zoom-out" data-aos-duration="1000">
+                                Berdasarkan
+                                data,
+                                sebenarnya tingkat <span class="orange-text">kemiskinan ekstrem</span> dan <span
+                                    class="orange-text">kemiskinan nasional</span> sudah mengalami penurunan
+                                dibanding tahun 2015.
+                            </h2>
+                            <h2 class="narasi2 narasi-mid" data-aos="zoom-out" id="narasi-loader-2"
+                                data-aos-duration="1000" data-aos-delay="1000">
+                                Namun, upaya percepatan untuk menurunkan kemiskinan harus dilakukan untuk
+                                mencapai
+                                <span class="orange-text">no poverty</span> di tahun 2030.
+                            </h2>
                         </div>
                         <!-- <div class="container-button last-item">
                             <button id="button-next-loader" class="learn-more">
@@ -538,7 +534,8 @@
                             Bank</a>
                     </span>
                     <span>
-                        <a class="list-sumber" href="https://www.youtube.com/watch?v=jiWuG7dlXUY&t=39s">Video Mekanisme Pendataan Awal Regsosek - Badan Pusat Statistik</a>
+                        <a class="list-sumber" href="https://www.youtube.com/watch?v=jiWuG7dlXUY&t=39s">Video Mekanisme
+                            Pendataan Awal Regsosek - Badan Pusat Statistik</a>
                     </span>
                 </div>
             </div>
@@ -1480,14 +1477,14 @@
             //     $("#narasi-panah-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             // }
             // else {
-                $("#section-regsosek").show(function () {
-                    $("html").animate(
-                        {
-                            scrollTop: $("#myVideo").offset().top
-                        },
-                        'slow'
-                    );
-                });
+            $("#section-regsosek").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#myVideo").offset().top
+                    },
+                    'slow'
+                );
+            });
             // }
         });
 
@@ -1542,17 +1539,17 @@
 
         $("#button-next-grafik").click(function () {
             if (flagGrafik == 1) {
-            
-                    anim4.playSegments([90, 240], true);
-                    $("#narasi-grafik-1").fadeOut(function () {
-                        $("#narasi-grafik-1").html('Sementara itu, <span class="orange-text">kemiskinan nasional</span> dari tahun <span class="orange-text">2015-2023</span> hanya berkurang sebesar <span class= "orange-text">1,86%</span>.');
-                        $("#narasi-grafik-2").html('Atau masih sekitar <mark class="highlight highlight-orange">25.8 juta penduduk miskin</mark> di tahun 2023.');
-                    });
-                    $("#narasi-grafik-1").fadeIn();
-                    //$("#narasi-grafik-2").animate({ opacity: 0 }, { queue: false, duration: 'slow' });
-                    flagGrafik = 2;
-                    console.log(flagGrafik);
-                
+
+                anim4.playSegments([90, 240], true);
+                $("#narasi-grafik-1").fadeOut(function () {
+                    $("#narasi-grafik-1").html('Sementara itu, <span class="orange-text">kemiskinan nasional</span> dari tahun <span class="orange-text">2015-2023</span> hanya berkurang sebesar <span class= "orange-text">1,86%</span>.');
+                    $("#narasi-grafik-2").html('Atau masih sekitar <mark class="highlight highlight-orange">25.8 juta penduduk miskin</mark> di tahun 2023.');
+                });
+                $("#narasi-grafik-1").fadeIn();
+                //$("#narasi-grafik-2").animate({ opacity: 0 }, { queue: false, duration: 'slow' });
+                flagGrafik = 2;
+                console.log(flagGrafik);
+
             }
             else {
                 // if ($("#narasi-grafik-2").css('opacity') == 0) {
@@ -1561,14 +1558,14 @@
                 //     console.log(flagGrafik);
                 // }
                 // else {
-                    $("#section-populasi").show(function () {
-                        $("html").animate(
-                            {
-                                scrollTop: $("#section-populasi").offset().top + 100
-                            },
-                            'slow'
-                        );
-                    });
+                $("#section-populasi").show(function () {
+                    $("html").animate(
+                        {
+                            scrollTop: $("#section-populasi").offset().top + 100
+                        },
+                        'slow'
+                    );
+                });
                 //}
             }
         });
@@ -1578,16 +1575,16 @@
             //     $("#narasi-regsosek-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             // }
             // else {
-                $("#section-preclosing").show();
-                $("#section-closing").show(function () {
-                    $("html").animate(
-                        {
-                            scrollTop: $("#section-closing").offset().top
-                        },
-                        'slow'
-                    );
-                    $("#kredit").show();
-                });
+            $("#section-preclosing").show();
+            $("#section-closing").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-closing").offset().top
+                    },
+                    'slow'
+                );
+                $("#kredit").show();
+            });
             // }
         });
 
@@ -1620,14 +1617,14 @@
             //     $("#narasi-basicneed-2").animate({ opacity: 1 }, { queue: false, duration: 'slow' });
             // }
             // else {
-                $("#section-povertyline").show(function () {
-                    $("html").animate(
-                        {
-                            scrollTop: $("#section-povertyline").offset().top
-                        },
-                        'slow'
-                    );
-                });
+            $("#section-povertyline").show(function () {
+                $("html").animate(
+                    {
+                        scrollTop: $("#section-povertyline").offset().top
+                    },
+                    'slow'
+                );
+            });
 
             //}
         });
